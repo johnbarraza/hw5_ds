@@ -1,0 +1,458 @@
+{
+  "page_number": 1003,
+  "text": "SOLES\nORO\nVienen\n167748,683\nMINISTERIO DE FOMENTO Y OBRAS PUBLICAS\nOBRAS POR CONTRATA\n—Construcciones:\nHotel Turista de Ilo\n2'700,000.00\nHotel Turista de Tarapoto\n1'200,000.00\nHotel Turista de Pucallpa\n1'500,000.00\nHotel Turista de Juliaca\n1'930,000.00\nHotel Turista de Moquegua\n1'930,000.00\nHotel Turista de Ica\n863,753.30\nTerminación demolición Cárcel Central\n104,693.00\nDemolición Cerco Exterior Cárcel Central\n268,740.00\nConstrución Estadio en Palambla y El Faique\n100,000.00\nObras Públicas Distritos Sayapuyo y Cajamarca\n262,583.82\nConstrucción Local Concejal de Urcos, Quispicanchis-Cuzco\n200,000.00\nArreglar Calles Distritos de Tabalagos-San Martín\n72,000.00\nTerminación Estadio Deportivo Municipal Dist. San Carlos (Chiclayo)\n500,000.00\nReparación y Conservación Malecón Sullana-Piura\n150,000.00\nConstrucción Campo Deportivo en Ilave-Puno\nEjecución Obras Públicas en Guadalupe\n1'000,000.00\nConstrucción Estadio Ferreñafe-Lambayeque\n1'000,000.00\nConstrucción Parque en Ferreñafe-Lambayeque\n500,000.00\nPavimentación del Aeropuerto de Huánuco\n500,000.00\nPavimentación Calles de Tingo María\n250,000.00\nPara Construcción Locales Públicos\n200,000.00\nPavimentación Calles de la Provincia de Huánuco\n500,000.00\nConstrucción Estadio de Pacchacomas-Apurímac\n100,000.00\nPavimentación de las Calles de Chulucanas-Piura\n100.000.00\nConstrucción Campo Deportivo de San Bartolo\n200,000.00\nEregir Monumento J. P. Vizcardo y Guzmán\n110,000.00\nConstrucción Casas Maestros Primarios — Empleados Públicos — Ica\n450,000.00\nTerminación de la Av. Parcona-Ica\n850,000.00\nConstrucción Local Federación Trabajadores de Tejidos del Perú\n200,000.00\nIniciación Construcción Centros Cívicos Paruro-Cuzco\n400,000.00\nEdificación Aduana Aguas Verdes, Tumbes\n350,000.00\nAeropuerto de Loma, San Martín\n300,000.00\nMercado de Abastos de Jaén\n100,000.00\nNivelar Estadio de Jaén\n100,000.00\nObras Públicas de Loreto — Ley 14644\nObras Públicas en Bagua, Luya, Chachapoyas\n1'000,000.00\nObras Públicas en San Martín\n1'000,000.00\nRemodelación de la Plaza Bolívar\n6'000,000.00\nConstrucción Centro Cívico\n38'177,641.88\nConstrucción Parque Botánico y Arqueológico\n14'167,000.00\nConstrucción Pozada Alojamiento Turistas — Provincia Paruro\n329,855.00\nConstrucción de Estadio en la Ciudad de Lambayeque\n1'000,000.00\nConstrucción Mercado de Hualgayoc (Cajamarca)\n250,000.00\nDotar Mobiliario Baños del Inca-Cajamarca\n250,000.00\nRemodelación Palacio de Justicia (Cajamarca)\n300,000.00\nDiversos Estudios por Realizar\n182,000.00\n81'648,267.00\nComisión Ejecutiva Interministerial de Cooperación Popular — Es-\ntudios y Proyectos Obras Públicas.\n151,84590\nDespacho Ministerial Centrales de Cooperación Popular y Desarro-\nllo Comunal. — Estudios Construcciones y Materiales de Cons-\n18'506,3969\ntrucción\nDirección de Fomento — Control de Urbanizaciones (Fomento Ur-\nbano) Ejecución Diversas Obras\n1'000,089.50\n101'306,600.69\n167746,687\nVan\n860—\nDigitized by Google",
+  "lines": [
+    {
+      "text": "SOLES",
+      "confidence": 0.9986215829849243
+    },
+    {
+      "text": "ORO",
+      "confidence": 0.998984158039093
+    },
+    {
+      "text": "Vienen",
+      "confidence": 0.9998757243156433
+    },
+    {
+      "text": "167748,683",
+      "confidence": 0.9410716891288757
+    },
+    {
+      "text": "MINISTERIO DE FOMENTO Y OBRAS PUBLICAS",
+      "confidence": 0.9954257607460022
+    },
+    {
+      "text": "OBRAS POR CONTRATA",
+      "confidence": 0.999904215335846
+    },
+    {
+      "text": "—Construcciones:",
+      "confidence": 0.9994508028030396
+    },
+    {
+      "text": "Hotel Turista de Ilo",
+      "confidence": 0.9990236163139343
+    },
+    {
+      "text": "2'700,000.00",
+      "confidence": 0.9660732746124268
+    },
+    {
+      "text": "Hotel Turista de Tarapoto",
+      "confidence": 0.9999920129776001
+    },
+    {
+      "text": "1'200,000.00",
+      "confidence": 0.996727466583252
+    },
+    {
+      "text": "Hotel Turista de Pucallpa",
+      "confidence": 0.9999892711639404
+    },
+    {
+      "text": "1'500,000.00",
+      "confidence": 0.998991072177887
+    },
+    {
+      "text": "Hotel Turista de Juliaca",
+      "confidence": 0.9999436736106873
+    },
+    {
+      "text": "1'930,000.00",
+      "confidence": 0.9989821314811707
+    },
+    {
+      "text": "Hotel Turista de Moquegua",
+      "confidence": 0.9888585805892944
+    },
+    {
+      "text": "1'930,000.00",
+      "confidence": 0.9994077086448669
+    },
+    {
+      "text": "Hotel Turista de Ica",
+      "confidence": 0.9999820590019226
+    },
+    {
+      "text": "863,753.30",
+      "confidence": 0.997665286064148
+    },
+    {
+      "text": "Terminación demolición Cárcel Central",
+      "confidence": 0.9898016452789307
+    },
+    {
+      "text": "104,693.00",
+      "confidence": 0.999981701374054
+    },
+    {
+      "text": "Demolición Cerco Exterior Cárcel Central",
+      "confidence": 0.9999135732650757
+    },
+    {
+      "text": "268,740.00",
+      "confidence": 0.9999939203262329
+    },
+    {
+      "text": "Construción Estadio en Palambla y El Faique",
+      "confidence": 0.9998759627342224
+    },
+    {
+      "text": "100,000.00",
+      "confidence": 0.9999805688858032
+    },
+    {
+      "text": "Obras Públicas Distritos Sayapuyo y Cajamarca",
+      "confidence": 0.9996926188468933
+    },
+    {
+      "text": "262,583.82",
+      "confidence": 0.9999841451644897
+    },
+    {
+      "text": "Construcción Local Concejal de Urcos, Quispicanchis-Cuzco",
+      "confidence": 0.9995825290679932
+    },
+    {
+      "text": "200,000.00",
+      "confidence": 0.9999871253967285
+    },
+    {
+      "text": "Arreglar Calles Distritos de Tabalagos-San Martín",
+      "confidence": 0.9969624280929565
+    },
+    {
+      "text": "72,000.00",
+      "confidence": 0.9999874830245972
+    },
+    {
+      "text": "Terminación Estadio Deportivo Municipal Dist. San Carlos (Chiclayo)",
+      "confidence": 0.9939755201339722
+    },
+    {
+      "text": "500,000.00",
+      "confidence": 0.9999485015869141
+    },
+    {
+      "text": "Reparación y Conservación Malecón Sullana-Piura",
+      "confidence": 0.9990593194961548
+    },
+    {
+      "text": "150,000.00",
+      "confidence": 0.9999858140945435
+    },
+    {
+      "text": "Construcción Campo Deportivo en Ilave-Puno",
+      "confidence": 0.9999428987503052
+    },
+    {
+      "text": "Ejecución Obras Públicas en Guadalupe",
+      "confidence": 0.999899685382843
+    },
+    {
+      "text": "1'000,000.00",
+      "confidence": 0.9984097480773926
+    },
+    {
+      "text": "Construcción Estadio Ferreñafe-Lambayeque",
+      "confidence": 0.9997482299804688
+    },
+    {
+      "text": "1'000,000.00",
+      "confidence": 0.9983461499214172
+    },
+    {
+      "text": "Construcción Parque en Ferreñafe-Lambayeque",
+      "confidence": 0.9998447299003601
+    },
+    {
+      "text": "500,000.00",
+      "confidence": 0.997763991355896
+    },
+    {
+      "text": "Pavimentación del Aeropuerto de Huánuco",
+      "confidence": 0.9935085773468018
+    },
+    {
+      "text": "500,000.00",
+      "confidence": 0.9999802708625793
+    },
+    {
+      "text": "Pavimentación Calles de Tingo María",
+      "confidence": 0.999599039554596
+    },
+    {
+      "text": "250,000.00",
+      "confidence": 0.9998468160629272
+    },
+    {
+      "text": "Para Construcción Locales Públicos",
+      "confidence": 0.9991723299026489
+    },
+    {
+      "text": "200,000.00",
+      "confidence": 0.9999788999557495
+    },
+    {
+      "text": "Pavimentación Calles de la Provincia de Huánuco",
+      "confidence": 0.9998989701271057
+    },
+    {
+      "text": "500,000.00",
+      "confidence": 0.9999682307243347
+    },
+    {
+      "text": "Construcción Estadio de Pacchacomas-Apurímac",
+      "confidence": 0.9969608187675476
+    },
+    {
+      "text": "100,000.00",
+      "confidence": 0.999975323677063
+    },
+    {
+      "text": "Pavimentación de las Calles de Chulucanas-Piura",
+      "confidence": 0.9982607960700989
+    },
+    {
+      "text": "100.000.00",
+      "confidence": 0.9999433755874634
+    },
+    {
+      "text": "Construcción Campo Deportivo de San Bartolo",
+      "confidence": 0.9943538308143616
+    },
+    {
+      "text": "200,000.00",
+      "confidence": 0.9999869465827942
+    },
+    {
+      "text": "Eregir Monumento J. P. Vizcardo y Guzmán",
+      "confidence": 0.9943076372146606
+    },
+    {
+      "text": "110,000.00",
+      "confidence": 0.9999748468399048
+    },
+    {
+      "text": "Construcción Casas Maestros Primarios — Empleados Públicos — Ica",
+      "confidence": 0.9849259257316589
+    },
+    {
+      "text": "450,000.00",
+      "confidence": 0.9999883770942688
+    },
+    {
+      "text": "Terminación de la Av. Parcona-Ica",
+      "confidence": 0.999870777130127
+    },
+    {
+      "text": "850,000.00",
+      "confidence": 0.9999891519546509
+    },
+    {
+      "text": "Construcción Local Federación Trabajadores de Tejidos del Perú",
+      "confidence": 0.9938389658927917
+    },
+    {
+      "text": "200,000.00",
+      "confidence": 0.9999812841415405
+    },
+    {
+      "text": "Iniciación Construcción Centros Cívicos Paruro-Cuzco",
+      "confidence": 0.9918104410171509
+    },
+    {
+      "text": "400,000.00",
+      "confidence": 0.9999869465827942
+    },
+    {
+      "text": "Edificación Aduana Aguas Verdes, Tumbes",
+      "confidence": 0.999832034111023
+    },
+    {
+      "text": "350,000.00",
+      "confidence": 0.9999891519546509
+    },
+    {
+      "text": "Aeropuerto de Loma, San Martín",
+      "confidence": 0.9998024106025696
+    },
+    {
+      "text": "300,000.00",
+      "confidence": 0.9999856948852539
+    },
+    {
+      "text": "Mercado de Abastos de Jaén",
+      "confidence": 0.99978107213974
+    },
+    {
+      "text": "100,000.00",
+      "confidence": 0.9995254278182983
+    },
+    {
+      "text": "Nivelar Estadio de Jaén",
+      "confidence": 0.999944269657135
+    },
+    {
+      "text": "100,000.00",
+      "confidence": 0.9584007263183594
+    },
+    {
+      "text": "Obras Públicas de Loreto — Ley 14644",
+      "confidence": 0.9950132369995117
+    },
+    {
+      "text": "Obras Públicas en Bagua, Luya, Chachapoyas",
+      "confidence": 0.9997988939285278
+    },
+    {
+      "text": "1'000,000.00",
+      "confidence": 0.9979999661445618
+    },
+    {
+      "text": "Obras Públicas en San Martín",
+      "confidence": 0.9994922876358032
+    },
+    {
+      "text": "1'000,000.00",
+      "confidence": 0.9977185130119324
+    },
+    {
+      "text": "Remodelación de la Plaza Bolívar",
+      "confidence": 0.9978771805763245
+    },
+    {
+      "text": "6'000,000.00",
+      "confidence": 0.9968793392181396
+    },
+    {
+      "text": "Construcción Centro Cívico",
+      "confidence": 0.9816214442253113
+    },
+    {
+      "text": "38'177,641.88",
+      "confidence": 0.9967889189720154
+    },
+    {
+      "text": "Construcción Parque Botánico y Arqueológico",
+      "confidence": 0.996636688709259
+    },
+    {
+      "text": "14'167,000.00",
+      "confidence": 0.998679518699646
+    },
+    {
+      "text": "Construcción Pozada Alojamiento Turistas — Provincia Paruro",
+      "confidence": 0.9949198961257935
+    },
+    {
+      "text": "329,855.00",
+      "confidence": 0.9999940991401672
+    },
+    {
+      "text": "Construcción de Estadio en la Ciudad de Lambayeque",
+      "confidence": 0.999922513961792
+    },
+    {
+      "text": "1'000,000.00",
+      "confidence": 0.998706042766571
+    },
+    {
+      "text": "Construcción Mercado de Hualgayoc (Cajamarca)",
+      "confidence": 0.9986554384231567
+    },
+    {
+      "text": "250,000.00",
+      "confidence": 0.9999909400939941
+    },
+    {
+      "text": "Dotar Mobiliario Baños del Inca-Cajamarca",
+      "confidence": 0.9995730519294739
+    },
+    {
+      "text": "250,000.00",
+      "confidence": 0.9999912977218628
+    },
+    {
+      "text": "Remodelación Palacio de Justicia (Cajamarca)",
+      "confidence": 0.9995900988578796
+    },
+    {
+      "text": "300,000.00",
+      "confidence": 0.9999855160713196
+    },
+    {
+      "text": "Diversos Estudios por Realizar",
+      "confidence": 0.9998375773429871
+    },
+    {
+      "text": "182,000.00",
+      "confidence": 0.9999907612800598
+    },
+    {
+      "text": "81'648,267.00",
+      "confidence": 0.9627732634544373
+    },
+    {
+      "text": "Comisión Ejecutiva Interministerial de Cooperación Popular — Es-",
+      "confidence": 0.9992157220840454
+    },
+    {
+      "text": "tudios y Proyectos Obras Públicas.",
+      "confidence": 0.9684111475944519
+    },
+    {
+      "text": "151,84590",
+      "confidence": 0.99897301197052
+    },
+    {
+      "text": "Despacho Ministerial Centrales de Cooperación Popular y Desarro-",
+      "confidence": 0.9944616556167603
+    },
+    {
+      "text": "llo Comunal. — Estudios Construcciones y Materiales de Cons-",
+      "confidence": 0.9832401871681213
+    },
+    {
+      "text": "18'506,3969",
+      "confidence": 0.9916570782661438
+    },
+    {
+      "text": "trucción",
+      "confidence": 0.9998962879180908
+    },
+    {
+      "text": "Dirección de Fomento — Control de Urbanizaciones (Fomento Ur-",
+      "confidence": 0.9865809679031372
+    },
+    {
+      "text": "bano) Ejecución Diversas Obras",
+      "confidence": 0.9956137537956238
+    },
+    {
+      "text": "1'000,089.50",
+      "confidence": 0.9470386505126953
+    },
+    {
+      "text": "101'306,600.69",
+      "confidence": 0.999016284942627
+    },
+    {
+      "text": "167746,687",
+      "confidence": 0.9944804906845093
+    },
+    {
+      "text": "Van",
+      "confidence": 0.9999921917915344
+    },
+    {
+      "text": "860—",
+      "confidence": 0.9347222447395325
+    },
+    {
+      "text": "Digitized by Google",
+      "confidence": 0.9978235960006714
+    }
+  ]
+}

@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 import ocr_engine as oe  # noqa: E402
 
-PAGINAS_1964 = [52, 53, 54, 55, 57, 58, 61, 66, 69, 76, 79, 86, 87, 97, 103]
+PAGINAS_1964 = [38, 100, 190, 226, 272, 358, 421, 532, 644, 854, 1003, 1031, 1037, 1066, 1068]
 
 
 def test_pdf_descargado():

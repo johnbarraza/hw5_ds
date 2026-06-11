@@ -1,0 +1,390 @@
+{
+  "page_number": 1031,
+  "text": "SOLESORO\nVienen\n378'508,858.47\nCORPORACION DE FOMENTO Y DESARROLLO ECONOMICO DEL\nDEPARTAMENTO DE TACNA\nAdquisición Mobiliario y Enseres\n33,633.50\nAdquisición de Vehículos\n172,800.00\nEquipo Mecánico de Oficina\n32,127.40\nEquipo de Ingeniería\n198.00\nEquipo y Herramientas para Talleres\n3,280.00\nOtros\n827.00\n242,865.90\nINVERSIONES:\nTerrenos, Carretera Mirave-Aricota\n11,635.90\nAdquisición Fundo \"Paquiña\"\n145,728.00\nEstudios Carretera Locumba-Mirave-Ilavaya\n155,230.00\nIndemnización Mayores Areas Terrenos afectados - Construción\nCarretera Mirave-Aricota\n562,590.90\n875,184.80\nOBRAS EJECUCION PLAN TACNA:\nCómputo Amortización año 1964.\n20'014,907.76\n21'132,958.46\nCORPORACION DE RECONSTRUCCION Y FOMENTO DEL CUZCO\nServicios Eléctricos — Generales\n6'034,191.66\nObras Coloniales\n1'305,075.40\nRestauración Pictórica\n66,886.16\nObras Arqueológicas\n588,784.92\nUrbanismo\n153,181.11\nObras Civiles\n1'296,235.53\nParque Arqueológico\n758.34\nObras Públicas..\n1'454,465.48\nFomento Rural\n1'897,931.21\nInstalación y Equipos\n601,009.63\nFomento Industrial\n54,887.62\nCentro Hidro-Macchupicchu\n20360,683.47\nServicios Eléctricos en la Central Hidro-Macchupicchu\n538,127.73\n34'352,218.26\nCORPORACION DE FOMENTO Y PROMOCION SOCIAL Y\nECONOMICA DE PUNO\nObras Públicas, Viviendas y Urbanismo\n45'408,415.44\nConvenios y Transferencias\n7'249,722.88\nPrograma de Educación\n5'410,463.49\nRedistribución Agraria\n4'313,274.09\nProgramación Agropecuaria\n2'575,103.83\nPromoción y Fomento de Cooperativas\n1'571,812.64\nEconomía, Comercio e Industrias\n649,581.07\nPromoción Turística\n656,809.33\nIntegración Cultural\n618,362,47\nFondo Artesanal\n2'872,121.01\nFrigorífico de Cabanillas\n9198,195.00\nAlta Dirección, Contabilidad y Administración\n800,493.73\n81'324,354.98\nJUNTA DE REHABILITACION DEL DEPARTAMENTO DE\nMOQUEGUA\nTransferencia del Ministerio de Fomento\n2'000,000.00\nVan\n517'318,390.17\n-886—\nDigitized by Google",
+  "lines": [
+    {
+      "text": "SOLESORO",
+      "confidence": 0.9998311996459961
+    },
+    {
+      "text": "Vienen",
+      "confidence": 0.9999964833259583
+    },
+    {
+      "text": "378'508,858.47",
+      "confidence": 0.9933196306228638
+    },
+    {
+      "text": "CORPORACION DE FOMENTO Y DESARROLLO ECONOMICO DEL",
+      "confidence": 0.998872697353363
+    },
+    {
+      "text": "DEPARTAMENTO DE TACNA",
+      "confidence": 0.9997105598449707
+    },
+    {
+      "text": "Adquisición Mobiliario y Enseres",
+      "confidence": 0.999769389629364
+    },
+    {
+      "text": "33,633.50",
+      "confidence": 0.9999533891677856
+    },
+    {
+      "text": "Adquisición de Vehículos",
+      "confidence": 0.9991267323493958
+    },
+    {
+      "text": "172,800.00",
+      "confidence": 0.9999930262565613
+    },
+    {
+      "text": "Equipo Mecánico de Oficina",
+      "confidence": 0.9998902678489685
+    },
+    {
+      "text": "32,127.40",
+      "confidence": 0.9999897480010986
+    },
+    {
+      "text": "Equipo de Ingeniería",
+      "confidence": 0.9999003410339355
+    },
+    {
+      "text": "198.00",
+      "confidence": 0.9999939799308777
+    },
+    {
+      "text": "Equipo y Herramientas para Talleres",
+      "confidence": 0.9998629689216614
+    },
+    {
+      "text": "3,280.00",
+      "confidence": 0.9999942779541016
+    },
+    {
+      "text": "Otros",
+      "confidence": 0.9999281167984009
+    },
+    {
+      "text": "827.00",
+      "confidence": 0.9999971389770508
+    },
+    {
+      "text": "242,865.90",
+      "confidence": 0.9999936819076538
+    },
+    {
+      "text": "INVERSIONES:",
+      "confidence": 0.9992275834083557
+    },
+    {
+      "text": "Terrenos, Carretera Mirave-Aricota",
+      "confidence": 0.991333544254303
+    },
+    {
+      "text": "11,635.90",
+      "confidence": 0.9999234676361084
+    },
+    {
+      "text": "Adquisición Fundo \"Paquiña\"",
+      "confidence": 0.987201988697052
+    },
+    {
+      "text": "145,728.00",
+      "confidence": 0.9999935030937195
+    },
+    {
+      "text": "Estudios Carretera Locumba-Mirave-Ilavaya",
+      "confidence": 0.9999003410339355
+    },
+    {
+      "text": "155,230.00",
+      "confidence": 0.9999930262565613
+    },
+    {
+      "text": "Indemnización Mayores Areas Terrenos afectados - Construción",
+      "confidence": 0.9994961023330688
+    },
+    {
+      "text": "Carretera Mirave-Aricota",
+      "confidence": 0.9998841285705566
+    },
+    {
+      "text": "562,590.90",
+      "confidence": 0.9994715452194214
+    },
+    {
+      "text": "875,184.80",
+      "confidence": 0.999992847442627
+    },
+    {
+      "text": "OBRAS EJECUCION PLAN TACNA:",
+      "confidence": 0.9996032118797302
+    },
+    {
+      "text": "Cómputo Amortización año 1964.",
+      "confidence": 0.9931346774101257
+    },
+    {
+      "text": "20'014,907.76",
+      "confidence": 0.9987996220588684
+    },
+    {
+      "text": "21'132,958.46",
+      "confidence": 0.9883028268814087
+    },
+    {
+      "text": "CORPORACION DE RECONSTRUCCION Y FOMENTO DEL CUZCO",
+      "confidence": 0.9993900656700134
+    },
+    {
+      "text": "Servicios Eléctricos — Generales",
+      "confidence": 0.9986433982849121
+    },
+    {
+      "text": "6'034,191.66",
+      "confidence": 0.9981644153594971
+    },
+    {
+      "text": "Obras Coloniales",
+      "confidence": 0.9732168912887573
+    },
+    {
+      "text": "1'305,075.40",
+      "confidence": 0.9973334670066833
+    },
+    {
+      "text": "Restauración Pictórica",
+      "confidence": 0.9998691082000732
+    },
+    {
+      "text": "66,886.16",
+      "confidence": 0.9934757947921753
+    },
+    {
+      "text": "Obras Arqueológicas",
+      "confidence": 0.9996036887168884
+    },
+    {
+      "text": "588,784.92",
+      "confidence": 0.9999746084213257
+    },
+    {
+      "text": "Urbanismo",
+      "confidence": 0.9999340772628784
+    },
+    {
+      "text": "153,181.11",
+      "confidence": 0.9999853372573853
+    },
+    {
+      "text": "Obras Civiles",
+      "confidence": 0.9998244047164917
+    },
+    {
+      "text": "1'296,235.53",
+      "confidence": 0.9932427406311035
+    },
+    {
+      "text": "Parque Arqueológico",
+      "confidence": 0.9997298717498779
+    },
+    {
+      "text": "758.34",
+      "confidence": 0.9999987483024597
+    },
+    {
+      "text": "Obras Públicas..",
+      "confidence": 0.9956900477409363
+    },
+    {
+      "text": "1'454,465.48",
+      "confidence": 0.9928810000419617
+    },
+    {
+      "text": "Fomento Rural",
+      "confidence": 0.999914824962616
+    },
+    {
+      "text": "1'897,931.21",
+      "confidence": 0.9985033869743347
+    },
+    {
+      "text": "Instalación y Equipos",
+      "confidence": 0.9924802184104919
+    },
+    {
+      "text": "601,009.63",
+      "confidence": 0.9998090863227844
+    },
+    {
+      "text": "Fomento Industrial",
+      "confidence": 0.9997473955154419
+    },
+    {
+      "text": "54,887.62",
+      "confidence": 0.9999895095825195
+    },
+    {
+      "text": "Centro Hidro-Macchupicchu",
+      "confidence": 0.9998844861984253
+    },
+    {
+      "text": "20360,683.47",
+      "confidence": 0.999122142791748
+    },
+    {
+      "text": "Servicios Eléctricos en la Central Hidro-Macchupicchu",
+      "confidence": 0.9901685118675232
+    },
+    {
+      "text": "538,127.73",
+      "confidence": 0.9999858736991882
+    },
+    {
+      "text": "34'352,218.26",
+      "confidence": 0.9590908885002136
+    },
+    {
+      "text": "CORPORACION DE FOMENTO Y PROMOCION SOCIAL Y",
+      "confidence": 0.9990866780281067
+    },
+    {
+      "text": "ECONOMICA DE PUNO",
+      "confidence": 0.9989665746688843
+    },
+    {
+      "text": "Obras Públicas, Viviendas y Urbanismo",
+      "confidence": 0.988712728023529
+    },
+    {
+      "text": "45'408,415.44",
+      "confidence": 0.9958714842796326
+    },
+    {
+      "text": "Convenios y Transferencias",
+      "confidence": 0.983759880065918
+    },
+    {
+      "text": "7'249,722.88",
+      "confidence": 0.9936707615852356
+    },
+    {
+      "text": "Programa de Educación",
+      "confidence": 0.9999178051948547
+    },
+    {
+      "text": "5'410,463.49",
+      "confidence": 0.9970646500587463
+    },
+    {
+      "text": "Redistribución Agraria",
+      "confidence": 0.9997915029525757
+    },
+    {
+      "text": "4'313,274.09",
+      "confidence": 0.9990301728248596
+    },
+    {
+      "text": "Programación Agropecuaria",
+      "confidence": 0.9998922944068909
+    },
+    {
+      "text": "2'575,103.83",
+      "confidence": 0.9992291927337646
+    },
+    {
+      "text": "Promoción y Fomento de Cooperativas",
+      "confidence": 0.9996903538703918
+    },
+    {
+      "text": "1'571,812.64",
+      "confidence": 0.9970101714134216
+    },
+    {
+      "text": "Economía, Comercio e Industrias",
+      "confidence": 0.9941547513008118
+    },
+    {
+      "text": "649,581.07",
+      "confidence": 0.9999617338180542
+    },
+    {
+      "text": "Promoción Turística",
+      "confidence": 0.9998325705528259
+    },
+    {
+      "text": "656,809.33",
+      "confidence": 0.998248279094696
+    },
+    {
+      "text": "Integración Cultural",
+      "confidence": 0.9998295903205872
+    },
+    {
+      "text": "618,362,47",
+      "confidence": 0.9999624490737915
+    },
+    {
+      "text": "Fondo Artesanal",
+      "confidence": 0.9995260834693909
+    },
+    {
+      "text": "2'872,121.01",
+      "confidence": 0.9966583847999573
+    },
+    {
+      "text": "Frigorífico de Cabanillas",
+      "confidence": 0.9799911975860596
+    },
+    {
+      "text": "9198,195.00",
+      "confidence": 0.9999508261680603
+    },
+    {
+      "text": "Alta Dirección, Contabilidad y Administración",
+      "confidence": 0.9901707172393799
+    },
+    {
+      "text": "800,493.73",
+      "confidence": 0.9999834299087524
+    },
+    {
+      "text": "81'324,354.98",
+      "confidence": 0.9898884296417236
+    },
+    {
+      "text": "JUNTA DE REHABILITACION DEL DEPARTAMENTO DE",
+      "confidence": 0.995148241519928
+    },
+    {
+      "text": "MOQUEGUA",
+      "confidence": 0.999157190322876
+    },
+    {
+      "text": "Transferencia del Ministerio de Fomento",
+      "confidence": 0.9995942711830139
+    },
+    {
+      "text": "2'000,000.00",
+      "confidence": 0.9719019532203674
+    },
+    {
+      "text": "Van",
+      "confidence": 0.9999845623970032
+    },
+    {
+      "text": "517'318,390.17",
+      "confidence": 0.9762622714042664
+    },
+    {
+      "text": "-886—",
+      "confidence": 0.7595369219779968
+    },
+    {
+      "text": "Digitized by Google",
+      "confidence": 0.9912297129631042
+    }
+  ]
+}

@@ -11,7 +11,6 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 import pandas as pd
-import requests
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -21,12 +20,13 @@ PAGES_DIR = PROJECT_ROOT / "data" / "processed" / "ocr_pages_1964"
 QUALITY_PATH = PROJECT_ROOT / "data" / "processed" / "ocr_quality_1964.csv"
 PAGE_SELECTION_PATH = PROJECT_ROOT / "data" / "snapshots" / "ocr_page_selection_1964.csv"
 
-# The 1964 source named in instrucciones_hw5.md (fuenteshistoricasdelperu.com ->
-# Google Books id 9YkbAQAAMAAJ) is snippet-only with no downloadable pages, so
-# this official BCRP annual report for fiscal year 1964 is used instead. It
-# contains "Presupuesto de Egresos Ejecutado durante el Ano 1964" plus 39
-# statistical anexos covering revenue, expenditure, balance and trade.
-SOURCE_URL = "https://www.bcrp.gob.pe/docs/Publicaciones/Memoria/Memoria-BCRP-1964.pdf"
+# Official 1964 source named in instrucciones_hw5.md: "Cuenta General de la
+# Republica - Ano 1964" (Ministerio de Hacienda y Comercio), via the
+# Fuentes Historicas del Peru portal (Google Books id 9YkbAQAAMAAJ):
+# https://fuenteshistoricasdelperu.com/2021/08/12/ministerio-de-hacienda-y-comercio-presupuesto-balance-y-cuenta-general-de-la-republica/
+# The portal does not expose a direct downloadable PDF URL (Google Books
+# embed only), so the 1073-page PDF must be placed manually at PDF_PATH.
+SOURCE_URL = "https://fuenteshistoricasdelperu.com/2021/08/12/ministerio-de-hacienda-y-comercio-presupuesto-balance-y-cuenta-general-de-la-republica/"
 
 DPI = 300
 LOW_CONFIDENCE_THRESHOLD = 0.80
@@ -37,19 +37,21 @@ _AMOUNT_PATTERN = re.compile(r"(?:S/\.?\s*)?\d[\d.,']*\d|\d", re.UNICODE)
 
 
 def descargar_documento_1964() -> Path:
-    """Download the 1964 fiscal archive PDF to data/raw_pdfs/ if not already present."""
+    """Verify the 1964 fiscal archive PDF is present at PDF_PATH.
+
+    The official source (SOURCE_URL) is a Fuentes Historicas del Peru blog
+    post embedding a Google Books viewer with no direct PDF download link,
+    so the document must be downloaded manually from that page and placed
+    at PDF_PATH.
+    """
     PDF_PATH.parent.mkdir(parents=True, exist_ok=True)
     if PDF_PATH.exists() and PDF_PATH.stat().st_size > 100_000:
         return PDF_PATH
 
-    response = requests.get(
-        SOURCE_URL,
-        headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"},
-        timeout=60,
+    raise FileNotFoundError(
+        f"{PDF_PATH} not found. Download the 'Cuenta General de la Republica - "
+        f"Ano 1964' PDF manually from {SOURCE_URL} and place it at this path."
     )
-    response.raise_for_status()
-    PDF_PATH.write_bytes(response.content)
-    return PDF_PATH
 
 
 def _render_page_image(page_number: int) -> Path:

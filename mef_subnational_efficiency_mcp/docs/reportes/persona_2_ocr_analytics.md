@@ -3,20 +3,22 @@
 ## Estado
 
 - [x] En progreso
-- [ ] Terminado
+- [x] Terminado
 - [x] Smoke tests aprobados (8/8 en tests/test_ocr_engine.py y tests/test_analytical_engine.py)
 - [ ] PR abierto
 
 ## Que hice
 
-- Implemente `src/ocr_engine.py` (descarga PDF, render 300dpi via PyMuPDF, OCR con PaddleOCR, parseo a CSV) y `src/analytical_engine.py` (metricas 2025, top peores ejecutores, resumen 1964).
-- Descargue el documento 1964, seleccione 15 paginas con cobertura balanceada y genere manifest, evidencia OCR cruda, csv de calidad y CSV final historico.
+- Implemente `src/ocr_engine.py` (verificacion de PDF local, render 300dpi via PyMuPDF, OCR con PaddleOCR, parseo a CSV) y `src/analytical_engine.py` (metricas 2025, top peores ejecutores, resumen 1964).
+- Coloque el documento 1964 oficial, seleccione 15 paginas con cobertura balanceada y genere manifest, evidencia OCR cruda, csv de calidad y CSV final historico.
 
-## Cambio de fuente del documento 1964 (IMPORTANTE)
+## Fuente del documento 1964
 
-El enlace de `instrucciones_hw5.md` (fuenteshistoricasdelperu.com -> Google Books id `9YkbAQAAMAAJ`) es de solo vista previa ("snippet"): no permite descargar el PDF ni paginas individuales (la API de imagenes de Google Books devuelve "image not available").
+Documento: **"Cuenta General de la Republica - Ano 1964" (Ministerio de Hacienda y Comercio)**, fuente oficial indicada en `instrucciones_hw5.md` (linea 27), via [Fuentes Historicas del Peru](https://fuenteshistoricasdelperu.com/2021/08/12/ministerio-de-hacienda-y-comercio-presupuesto-balance-y-cuenta-general-de-la-republica/) (Google Books id `9YkbAQAAMAAJ`), 1073 paginas.
 
-Se uso como sustituto un documento oficial real y descargable: **Memoria del Banco Central de Reserva del Peru, ejercicio 1964** (`https://www.bcrp.gob.pe/docs/Publicaciones/Memoria/Memoria-BCRP-1964.pdf`, 111 paginas). Contiene "Presupuesto de Egresos Ejecutado durante el Ano 1964" y 39 anexos estadisticos (balance del banco, comercio exterior, produccion, etc.), cumpliendo el espiritu del enunciado (matrices financieras 1964 para OCR).
+El portal no expone un enlace directo de descarga del PDF (solo un visor embebido de Google Books), por lo que el documento se descargo manualmente y se coloco en `data/raw_pdfs/presupuesto_1964.pdf`. `descargar_documento_1964()` solo verifica que el archivo exista localmente y lanza `FileNotFoundError` con instrucciones si falta.
+
+Nota: una version anterior de este pipeline (commit `d13bad8`) uso como sustituto la Memoria del BCRP 1964 (snippet de Google Books inaccesible en ese momento). Esa version fue reemplazada por completo: nuevo PDF, nuevas 15 paginas, nuevo manifest y nuevo CSV historico.
 
 ## Archivos creados o modificados
 
@@ -32,9 +34,9 @@ Se uso como sustituto un documento oficial real y descargable: **Memoria del Ban
 
 ## Datos usados
 
-- Fuente PDF: Memoria BCRP 1964 (ver seccion anterior).
-- Paginas procesadas exactamente 15: 52, 53, 54, 55, 57, 58, 61, 66, 69, 76, 79, 86, 87, 97, 103.
-- Criterio de seleccion de paginas: cobertura balanceada entre presupuesto de egresos ejecutado 1964, balance general del BCR, indicadores monetarios, comercio exterior, produccion y balanza de pagos. Detalle y razon por pagina en `data/snapshots/ocr_page_selection_1964.csv`.
+- Fuente PDF: Cuenta General de la Republica 1964, Ministerio de Hacienda y Comercio (ver seccion anterior).
+- Paginas procesadas exactamente 15: 38, 100, 190, 226, 272, 358, 421, 532, 644, 854, 1003, 1031, 1037, 1066, 1068.
+- Criterio de seleccion de paginas: cobertura balanceada entre ingresos (2), egresos por ministerio (3), pliego/presupuesto funcional (3), deuda publica (1), inversion/obras/departamentos (3), resumen general (2) y egresos del pliego inicial (1). Detalle y razon por pagina en `data/snapshots/ocr_page_selection_1964.csv`.
 - Archivo manifest: `data/snapshots/ocr_page_selection_1964.csv`
 - Campos extraidos: `page_number, source_line, category, concept, amount_raw, amount_numeric, parser_confidence`.
 - Resolucion usada para convertir PDF a imagen: 300 DPI (PyMuPDF, `zoom = 300/72`).
@@ -45,10 +47,13 @@ Se uso como sustituto un documento oficial real y descargable: **Memoria del Ban
 ```bash
 python -m venv .venv
 .venv/Scripts/pip install -r requirements.txt
+# Descargar manualmente "Cuenta General de la Republica - Ano 1964" desde
+# https://fuenteshistoricasdelperu.com/2021/08/12/ministerio-de-hacienda-y-comercio-presupuesto-balance-y-cuenta-general-de-la-republica/
+# y colocarlo en data/raw_pdfs/presupuesto_1964.pdf
 .venv/Scripts/python -c "
 import sys; sys.path.insert(0,'src')
 import ocr_engine as oe
-paginas = [52,53,54,55,57,58,61,66,69,76,79,86,87,97,103]
+paginas = [38,100,190,226,272,358,421,532,644,854,1003,1031,1037,1066,1068]
 oe.exportar_historical_1964(paginas)
 "
 .venv/Scripts/python -m pytest tests/test_ocr_engine.py tests/test_analytical_engine.py
@@ -58,32 +63,33 @@ Nota: `_ocr_page` cachea la salida cruda en `data/processed/ocr_pages_1964/page_
 
 ## Validaciones realizadas
 
-- [x] PDF existe y no esta vacio (5.3MB).
+- [x] PDF existe y no esta vacio (32.8MB, 1073 paginas).
 - [x] OCR proceso exactamente 15 paginas.
 - [x] Ninguna pagina devolvio texto vacio (todas > 50 caracteres).
 - [x] Existe `data/snapshots/ocr_page_selection_1964.csv`.
 - [x] Existe salida cruda por pagina en `data/processed/ocr_pages_1964/` (PNG + JSON).
 - [x] Existe `data/processed/ocr_quality_1964.csv`.
 - [x] Cada monto en `historical_1964.csv` conserva `amount_raw` y `page_number`.
-- [x] Paginas con baja confianza estan marcadas (columna `manual_review_required`); las 15 paginas dieron `False` (avg_confidence 0.886-0.999).
-- [x] CSV 1964 tiene filas utiles (2800 filas, 43 categorias, 2136 montos numericos, 23.7% nulos en columnas de monto).
-- [x] Resumen 1964 devuelve metricas numericas (`resumir_1964()` -> `total_categorias`, `total_montos`, `calidad_ocr`, etc.).
+- [x] Paginas con baja confianza estan marcadas (columna `manual_review_required`); 7 de 15 paginas (38, 190, 226, 272, 358, 532, 854) dieron `True` (avg_confidence 0.757-0.998, ver Notas de calidad OCR).
+- [x] CSV 1964 tiene filas utiles (783 filas, 97 categorias, 445 montos numericos, 43.2% nulos en columnas de monto).
+- [x] Resumen 1964 devuelve metricas numericas (`resumir_1964()` -> `total_categorias`, `total_montos`, `calidad_ocr`, etc.; `avg_confidence_promedio` 0.8943, `porcentaje_revision_manual` 46.67%).
+- [x] `pytest tests/test_ocr_engine.py tests/test_analytical_engine.py` -> 8/8 passed.
 
 ## Limitaciones
 
 - PaddleOCR detecta cada fragmento de texto como una linea independiente segun su caja delimitadora; en tablas, la etiqueta (concepto) y su monto suelen quedar en lineas/cajas separadas. El parser actual no agrupa por fila (coordenada Y), por lo que en muchas filas `concept` cae en la categoria de seccion (fallback) en vez del texto contiguo real, aunque `amount_raw`/`amount_numeric`/`page_number`/`source_line` siguen siendo correctos y trazables.
-- Algunos titulos de seccion ("ANEXO ...") quedan fragmentados por el OCR en mas de una "categoria" (ej. "AN E X O" vs "ANEXO"), generando categorias duplicadas/ruidosas en `total_categorias`.
-- El documento usado es la Memoria BCRP 1964 (sustituto), no la "Cuenta General de la Republica 1964" mencionada literalmente en el enunciado (esa fuente es inaccesible vía Google Books).
+- Titulos de seccion en mayusculas ("MINISTERIO DE...", "CAPITULO...", "TOTAL GENERAL...") suelen quedar fragmentados por el OCR en multiples "categorias" ruidosas (ej. `MINEIRIO`, `MINIEIO`, `MINIIRIO`, `OMACION`, `T�OUT AAUDO`, `TOUTAL LAUDO`), inflando `total_categorias` (97 categorias para 783 filas). Es la misma clase de problema documentado en la version anterior del pipeline (ahi era "AN E X O"), agravado aqui porque el escaneo de "Cuenta General 1964" tiene tipografia mas pequena/densa que la Memoria BCRP usada antes.
+- El escaneo original de varias paginas (38, 190, 226, 272, 358, 532, 854) tiene resolucion/contraste bajos, lo que produce `avg_confidence` entre 0.76 y 0.81 y marca esas paginas como `manual_review_required`.
 
 ## Mejoras posibles
 
 - Capturar `rec_polys` (bounding boxes) del OCR y agrupar fragmentos por banda Y para reconstruir filas tabulares concepto+monto reales.
-- Normalizar/deduplicar categorias de "ANEXO" fusionando fragmentos OCR contiguos antes de evaluar `_is_header_line`.
-- Usar PP-StructureV3 (table recognition) para las paginas mas tabulares (Anexos XII, XXIX, XXX) en vez de OCR de lineas sueltas.
+- Normalizar/deduplicar categorias fragmentadas (similitud de string contra una lista conocida de encabezados: "MINISTERIO DE...", "TOTAL GENERAL...", "CAPITULO...") antes de evaluar `_is_header_line`.
+- Usar PP-StructureV3 (table recognition) para las paginas mas tabulares y de baja confianza (38, 190, 226, 272, 358, 532, 854).
 
 ## Notas de calidad OCR
 
-- Paginas con mejor extraccion (avg_confidence > 0.99): 58, 61, 69, 76, 79, 86, 87, 97 (anexos estadisticos, tipografia tabular limpia).
-- Paginas que requieren revision manual: ninguna marcada automaticamente, pero 54 (0.8866), 103 (0.9096) y 52/53/55 (~0.90-0.91) tienen mas ruido tipografico (texto antiguo con ñ/í mal codificados en la capa original).
-- Errores comunes observados: simbolos de "ditto" (`>`, `》`) interpretados como caracteres sueltos; titulos en mayusculas fragmentados en multiples cajas OCR.
+- Paginas con mejor extraccion (avg_confidence > 0.97): 421 (0.9909), 644 (0.9764), 854 (0.9976), 1003 (0.9952), 1031 (0.9939), 1037 (0.9914), 1066 (0.9705), 1068 (0.9916).
+- Paginas marcadas para revision manual (`manual_review_required=True`): 38 (0.7571), 190 (0.7874), 226 (0.7917), 272 (0.7953), 358 (0.7797), 532 (0.7841) por baja confianza/alto conteo de tokens de baja confianza; 854 (0.9976) por `numeric_token_count=0` (pagina de sumario de deuda sin montos al final de linea detectados por el regex).
+- Errores comunes observados: caracteres acentuados (ñ/í/ó) y simbolos de moneda mal reconocidos; titulos en mayusculas fragmentados en multiples cajas OCR (ver Limitaciones).
 - Riesgo de interpretacion historica: los totales por categoria son sumas de montos individuales detectados linea por linea; al no estar agrupados por fila de tabla, una misma cifra (ej. un subtotal "Vienen...") puede coexistir con el detalle, por lo que `distribucion_por_categoria` debe leerse como "monto total mencionado en esa seccion", no como suma estrictamente no-redundante.
