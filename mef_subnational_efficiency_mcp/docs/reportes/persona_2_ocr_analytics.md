@@ -71,14 +71,14 @@ Nota: `_ocr_page` cachea la salida cruda en `data/processed/ocr_pages_1964/page_
 - [x] Existe `data/processed/ocr_quality_1964.csv`.
 - [x] Cada monto en `historical_1964.csv` conserva `amount_raw` y `page_number`.
 - [x] Paginas con baja confianza estan marcadas (columna `manual_review_required`); 7 de 15 paginas (38, 190, 226, 272, 358, 532, 854) dieron `True` (avg_confidence 0.757-0.998, ver Notas de calidad OCR).
-- [x] CSV 1964 tiene filas utiles (783 filas, 97 categorias, 445 montos numericos, 43.2% nulos en columnas de monto).
+- [x] CSV 1964 tiene filas utiles (783 filas, 78 categorias, 445 montos numericos, 43.2% nulos en columnas de monto).
 - [x] Resumen 1964 devuelve metricas numericas (`resumir_1964()` -> `total_categorias`, `total_montos`, `calidad_ocr`, etc.; `avg_confidence_promedio` 0.8943, `porcentaje_revision_manual` 46.67%).
 - [x] `pytest tests/test_ocr_engine.py tests/test_analytical_engine.py` -> 8/8 passed.
 
 ## Limitaciones
 
 - PaddleOCR detecta cada fragmento de texto como una linea independiente segun su caja delimitadora; en tablas, la etiqueta (concepto) y su monto suelen quedar en lineas/cajas separadas. El parser actual no agrupa por fila (coordenada Y), por lo que en muchas filas `concept` cae en la categoria de seccion (fallback) en vez del texto contiguo real, aunque `amount_raw`/`amount_numeric`/`page_number`/`source_line` siguen siendo correctos y trazables.
-- Titulos de seccion en mayusculas ("MINISTERIO DE...", "CAPITULO...", "TOTAL GENERAL...") suelen quedar fragmentados por el OCR en multiples "categorias" ruidosas (ej. `MINEIRIO`, `MINIEIO`, `MINIIRIO`, `OMACION`, `T�OUT AAUDO`, `TOUTAL LAUDO`), inflando `total_categorias` (97 categorias para 783 filas). Es la misma clase de problema documentado en la version anterior del pipeline (ahi era "AN E X O"), agravado aqui porque el escaneo de "Cuenta General 1964" tiene tipografia mas pequena/densa que la Memoria BCRP usada antes.
+- Titulos de seccion en mayusculas ("MINISTERIO DE...", "CAPITULO...", "TOTAL GENERAL...") suelen quedar fragmentados por el OCR en multiples "categorias" ruidosas (ej. `MINEIRIO`, `MINIEIO`, `MINIIRIO`, `OMACION`, `T�OUT AAUDO`, `TOUTAL LAUDO`). Es la misma clase de problema documentado en la version anterior del pipeline (ahi era "AN E X O"), agravado aqui porque el escaneo de "Cuenta General 1964" tiene tipografia mas pequena/densa que la Memoria BCRP usada antes. Mitigacion aplicada: `_is_header_line` ahora ignora (sin cambiar `current_category`) lineas-encabezado de menos de `MIN_HEADER_CATEGORY_LEN=6` caracteres (ej. `OMACO`, `ECDO`, `RADO`), que eran el grueso del ruido de un solo token; esto bajo `total_categorias` de 97 a 78 sin tocar filas/montos. Quedan fragmentos mas largos (7+ caracteres, ej. `MINEIRIO`, `OMACION`) que requieren la normalizacion/dedup mencionada en Mejoras posibles.
 - El escaneo original de varias paginas (38, 190, 226, 272, 358, 532, 854) tiene resolucion/contraste bajos, lo que produce `avg_confidence` entre 0.76 y 0.81 y marca esas paginas como `manual_review_required`.
 
 ## Mejoras posibles

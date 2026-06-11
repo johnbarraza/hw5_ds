@@ -33,6 +33,12 @@ LOW_CONFIDENCE_THRESHOLD = 0.80
 MIN_CHARS_PER_PAGE = 50
 MIN_NUMERIC_TOKENS = 3
 
+# Header lines shorter than this are likely single-token OCR garbage
+# (e.g. "OMACO", "ECDO") rather than real section titles, and would
+# otherwise fragment `category` into dozens of noise entries. Lines below
+# this length are dropped without changing `current_category`.
+MIN_HEADER_CATEGORY_LEN = 6
+
 _AMOUNT_PATTERN = re.compile(r"(?:S/\.?\s*)?\d[\d.,']*\d|\d", re.UNICODE)
 
 
@@ -213,7 +219,9 @@ def exportar_historical_1964(paginas: list[int]) -> Path:
                 low_confidence_count += 1
 
             if _is_header_line(text):
-                current_category = text.strip()
+                stripped = text.strip()
+                if len(stripped) >= MIN_HEADER_CATEGORY_LEN:
+                    current_category = stripped
                 continue
 
             match = None
