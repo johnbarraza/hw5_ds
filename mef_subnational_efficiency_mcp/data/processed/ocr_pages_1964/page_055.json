@@ -1,0 +1,490 @@
+{
+  "page_number": 55,
+  "text": "Vienen.\nS/. 22’229,512.00\nMantenimiento, Repuestos y Seguros\nMantenimiento de inmuebles\n120,000.00\n》\nMantenimiento de mobiliario y equipo de oficina\n》\n150,000.00\nMantenimiento y repuestos de equipos de transporte\n»\n40,000.00\nMantenimiento y repuestos de otros equipos\n50,000.00\n》\nMantenimiento y repuestos de armamento\n10,000.00\n》\nPrimas de seguros no personales\n35,000.00\n》\nImpresiones y Publicaciones\nEdición de libros y revistas\n995,000.00\n》\nAvisos, publicaciones o propaganda\n》\n120,000.00\nImpresos y formularios\n573,000.00\n》\nArrendamientos\nDe inmuebles\n2'576,700.00\n》\nDe equipos\n635,831.00\n》\nOtros Gastos en Bienes y Servícios\nGastos judiciales y notariales\n25,000.00\n》\nComisiones\n50,000.00\n»\nAtenciones oficiales\n200,000.00\n》\nImprevistos\n110,000.00\nD\nGastos de aduana\n》\n50,000.00\nCréditos Devengados por Bienes y Servicios\n》\n5'075,066.00\nTOTAL DE GASTOS EN BIENES Y SERVICIOS\nS/.\n33'045,109.00\nOBRAS POR CONTRATA\nEstudios\nS/.\n6'000,000.00\nTOTAL DE OBRAS DE CONTRATA\nS/.\n6'000,000.00\nGASTOS DE TRANSFERENCIAS\nTransferencias Corrientes a Otras Entidades del Sector Público\nAl Seguro Social del Empleado\nS/.\n492,000.00\nOtras.\n»\n4'864,884.00\nTransferencias Corrientes al Sector Privado\nPensiones de retiro, cesantía y jubilación\n3'612,852.00\n》\nIndemnizaciones\n》\n7'154,210.00\nSubsidios familiares\n»\n2'356,875.00\nSubsidios\n787,000.00\n》\nOtras\n65,200.00\n》\nTransferencias al Exterior\nD\n1'705,784.00\nTOTAL DE GASTOS DE TRANSFERENCIAS\nS/. 21'038,805.00\nTRIBUTOS\nTributos\nS/.\n12,370.00\nTOTAL POR TRIBUTOS\nS/.\n12,370.00\nRESUMEN\nREMUNERACIONES PERSONALES\nS/. 33'051,734.00\nGASTOS EN BIENES Y SERVICIOS\n33'045,109.00\n》\nOBRAS POR CONTRATA\n》\n6'000,000.00\nGASTOS DE TRANSFERENCIAS\n21'038,805.00\nD\nTRIBUTOS\nD\n12,370.00\nTOTAL:\nS/. 93'148,018.00\n-56—",
+  "lines": [
+    {
+      "text": "Vienen.",
+      "confidence": 0.9999421238899231
+    },
+    {
+      "text": "S/. 22’229,512.00",
+      "confidence": 0.9861189723014832
+    },
+    {
+      "text": "Mantenimiento, Repuestos y Seguros",
+      "confidence": 0.998498797416687
+    },
+    {
+      "text": "Mantenimiento de inmuebles",
+      "confidence": 0.9992514252662659
+    },
+    {
+      "text": "120,000.00",
+      "confidence": 0.9999868273735046
+    },
+    {
+      "text": "》",
+      "confidence": 0.48942330479621887
+    },
+    {
+      "text": "Mantenimiento de mobiliario y equipo de oficina",
+      "confidence": 0.9997949600219727
+    },
+    {
+      "text": "》",
+      "confidence": 0.3509032130241394
+    },
+    {
+      "text": "150,000.00",
+      "confidence": 0.9997099041938782
+    },
+    {
+      "text": "Mantenimiento y repuestos de equipos de transporte",
+      "confidence": 0.9907809495925903
+    },
+    {
+      "text": "»",
+      "confidence": 0.5598421692848206
+    },
+    {
+      "text": "40,000.00",
+      "confidence": 0.9999908804893494
+    },
+    {
+      "text": "Mantenimiento y repuestos de otros equipos",
+      "confidence": 0.9997736811637878
+    },
+    {
+      "text": "50,000.00",
+      "confidence": 0.9999704360961914
+    },
+    {
+      "text": "》",
+      "confidence": 0.5462212562561035
+    },
+    {
+      "text": "Mantenimiento y repuestos de armamento",
+      "confidence": 0.9998299479484558
+    },
+    {
+      "text": "10,000.00",
+      "confidence": 0.9999701380729675
+    },
+    {
+      "text": "》",
+      "confidence": 0.7731587886810303
+    },
+    {
+      "text": "Primas de seguros no personales",
+      "confidence": 0.9997357726097107
+    },
+    {
+      "text": "35,000.00",
+      "confidence": 0.9999877214431763
+    },
+    {
+      "text": "》",
+      "confidence": 0.8240037560462952
+    },
+    {
+      "text": "Impresiones y Publicaciones",
+      "confidence": 0.999691367149353
+    },
+    {
+      "text": "Edición de libros y revistas",
+      "confidence": 0.9945276379585266
+    },
+    {
+      "text": "995,000.00",
+      "confidence": 0.9986017346382141
+    },
+    {
+      "text": "》",
+      "confidence": 0.9221728444099426
+    },
+    {
+      "text": "Avisos, publicaciones o propaganda",
+      "confidence": 0.999236524105072
+    },
+    {
+      "text": "》",
+      "confidence": 0.5596813559532166
+    },
+    {
+      "text": "120,000.00",
+      "confidence": 0.9933164715766907
+    },
+    {
+      "text": "Impresos y formularios",
+      "confidence": 0.9991438388824463
+    },
+    {
+      "text": "573,000.00",
+      "confidence": 0.9999915957450867
+    },
+    {
+      "text": "》",
+      "confidence": 0.5745718479156494
+    },
+    {
+      "text": "Arrendamientos",
+      "confidence": 0.9998002648353577
+    },
+    {
+      "text": "De inmuebles",
+      "confidence": 0.9993639588356018
+    },
+    {
+      "text": "2'576,700.00",
+      "confidence": 0.997847855091095
+    },
+    {
+      "text": "》",
+      "confidence": 0.677945077419281
+    },
+    {
+      "text": "De equipos",
+      "confidence": 0.9987655878067017
+    },
+    {
+      "text": "635,831.00",
+      "confidence": 0.9999861717224121
+    },
+    {
+      "text": "》",
+      "confidence": 0.7808957099914551
+    },
+    {
+      "text": "Otros Gastos en Bienes y Servícios",
+      "confidence": 0.987121045589447
+    },
+    {
+      "text": "Gastos judiciales y notariales",
+      "confidence": 0.99819016456604
+    },
+    {
+      "text": "25,000.00",
+      "confidence": 0.9999802112579346
+    },
+    {
+      "text": "》",
+      "confidence": 0.794295072555542
+    },
+    {
+      "text": "Comisiones",
+      "confidence": 0.9999758005142212
+    },
+    {
+      "text": "50,000.00",
+      "confidence": 0.9999682903289795
+    },
+    {
+      "text": "»",
+      "confidence": 0.41785332560539246
+    },
+    {
+      "text": "Atenciones oficiales",
+      "confidence": 0.9999456405639648
+    },
+    {
+      "text": "200,000.00",
+      "confidence": 0.9999540448188782
+    },
+    {
+      "text": "》",
+      "confidence": 0.32796868681907654
+    },
+    {
+      "text": "Imprevistos",
+      "confidence": 0.9999828934669495
+    },
+    {
+      "text": "110,000.00",
+      "confidence": 0.9999867677688599
+    },
+    {
+      "text": "D",
+      "confidence": 0.38626036047935486
+    },
+    {
+      "text": "Gastos de aduana",
+      "confidence": 0.9987831115722656
+    },
+    {
+      "text": "》",
+      "confidence": 0.28630056977272034
+    },
+    {
+      "text": "50,000.00",
+      "confidence": 0.9996423721313477
+    },
+    {
+      "text": "Créditos Devengados por Bienes y Servicios",
+      "confidence": 0.9991578459739685
+    },
+    {
+      "text": "》",
+      "confidence": 0.7808455228805542
+    },
+    {
+      "text": "5'075,066.00",
+      "confidence": 0.994267463684082
+    },
+    {
+      "text": "TOTAL DE GASTOS EN BIENES Y SERVICIOS",
+      "confidence": 0.9995450377464294
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9851891398429871
+    },
+    {
+      "text": "33'045,109.00",
+      "confidence": 0.9897441864013672
+    },
+    {
+      "text": "OBRAS POR CONTRATA",
+      "confidence": 0.9965029954910278
+    },
+    {
+      "text": "Estudios",
+      "confidence": 0.9999818801879883
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9854456782341003
+    },
+    {
+      "text": "6'000,000.00",
+      "confidence": 0.9961913228034973
+    },
+    {
+      "text": "TOTAL DE OBRAS DE CONTRATA",
+      "confidence": 0.9998086094856262
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9967944622039795
+    },
+    {
+      "text": "6'000,000.00",
+      "confidence": 0.9987137317657471
+    },
+    {
+      "text": "GASTOS DE TRANSFERENCIAS",
+      "confidence": 0.9793906211853027
+    },
+    {
+      "text": "Transferencias Corrientes a Otras Entidades del Sector Público",
+      "confidence": 0.9997298121452332
+    },
+    {
+      "text": "Al Seguro Social del Empleado",
+      "confidence": 0.9731922745704651
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9469683170318604
+    },
+    {
+      "text": "492,000.00",
+      "confidence": 0.9999855756759644
+    },
+    {
+      "text": "Otras.",
+      "confidence": 0.9977460503578186
+    },
+    {
+      "text": "»",
+      "confidence": 0.7224171161651611
+    },
+    {
+      "text": "4'864,884.00",
+      "confidence": 0.9725016951560974
+    },
+    {
+      "text": "Transferencias Corrientes al Sector Privado",
+      "confidence": 0.9999421834945679
+    },
+    {
+      "text": "Pensiones de retiro, cesantía y jubilación",
+      "confidence": 0.9915846586227417
+    },
+    {
+      "text": "3'612,852.00",
+      "confidence": 0.9915294051170349
+    },
+    {
+      "text": "》",
+      "confidence": 0.9022373557090759
+    },
+    {
+      "text": "Indemnizaciones",
+      "confidence": 0.999855637550354
+    },
+    {
+      "text": "》",
+      "confidence": 0.8741179704666138
+    },
+    {
+      "text": "7'154,210.00",
+      "confidence": 0.972719669342041
+    },
+    {
+      "text": "Subsidios familiares",
+      "confidence": 0.9995395541191101
+    },
+    {
+      "text": "»",
+      "confidence": 0.7565551400184631
+    },
+    {
+      "text": "2'356,875.00",
+      "confidence": 0.9898677468299866
+    },
+    {
+      "text": "Subsidios",
+      "confidence": 0.9999815821647644
+    },
+    {
+      "text": "787,000.00",
+      "confidence": 0.9959219694137573
+    },
+    {
+      "text": "》",
+      "confidence": 0.8243335485458374
+    },
+    {
+      "text": "Otras",
+      "confidence": 0.9998178482055664
+    },
+    {
+      "text": "65,200.00",
+      "confidence": 0.9987725019454956
+    },
+    {
+      "text": "》",
+      "confidence": 0.6784311532974243
+    },
+    {
+      "text": "Transferencias al Exterior",
+      "confidence": 0.9904462099075317
+    },
+    {
+      "text": "D",
+      "confidence": 0.45571640133857727
+    },
+    {
+      "text": "1'705,784.00",
+      "confidence": 0.9956143498420715
+    },
+    {
+      "text": "TOTAL DE GASTOS DE TRANSFERENCIAS",
+      "confidence": 0.9794222712516785
+    },
+    {
+      "text": "S/. 21'038,805.00",
+      "confidence": 0.9893774390220642
+    },
+    {
+      "text": "TRIBUTOS",
+      "confidence": 0.9992749094963074
+    },
+    {
+      "text": "Tributos",
+      "confidence": 0.9999949336051941
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.8923847675323486
+    },
+    {
+      "text": "12,370.00",
+      "confidence": 0.9970564246177673
+    },
+    {
+      "text": "TOTAL POR TRIBUTOS",
+      "confidence": 0.9746816158294678
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9727783203125
+    },
+    {
+      "text": "12,370.00",
+      "confidence": 0.9993930459022522
+    },
+    {
+      "text": "RESUMEN",
+      "confidence": 0.9999498724937439
+    },
+    {
+      "text": "REMUNERACIONES PERSONALES",
+      "confidence": 0.9993771314620972
+    },
+    {
+      "text": "S/. 33'051,734.00",
+      "confidence": 0.9778814911842346
+    },
+    {
+      "text": "GASTOS EN BIENES Y SERVICIOS",
+      "confidence": 0.9989906549453735
+    },
+    {
+      "text": "33'045,109.00",
+      "confidence": 0.9898363947868347
+    },
+    {
+      "text": "》",
+      "confidence": 0.48070818185806274
+    },
+    {
+      "text": "OBRAS POR CONTRATA",
+      "confidence": 0.9727036952972412
+    },
+    {
+      "text": "》",
+      "confidence": 0.6591399908065796
+    },
+    {
+      "text": "6'000,000.00",
+      "confidence": 0.9987460970878601
+    },
+    {
+      "text": "GASTOS DE TRANSFERENCIAS",
+      "confidence": 0.9984328150749207
+    },
+    {
+      "text": "21'038,805.00",
+      "confidence": 0.9944261908531189
+    },
+    {
+      "text": "D",
+      "confidence": 0.46474772691726685
+    },
+    {
+      "text": "TRIBUTOS",
+      "confidence": 0.9997115135192871
+    },
+    {
+      "text": "D",
+      "confidence": 0.5253198742866516
+    },
+    {
+      "text": "12,370.00",
+      "confidence": 0.9999508261680603
+    },
+    {
+      "text": "TOTAL:",
+      "confidence": 0.9996964335441589
+    },
+    {
+      "text": "S/. 93'148,018.00",
+      "confidence": 0.9789974093437195
+    },
+    {
+      "text": "-56—",
+      "confidence": 0.7748186588287354
+    }
+  ]
+}

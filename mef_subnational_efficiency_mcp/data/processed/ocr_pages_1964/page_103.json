@@ -1,0 +1,506 @@
+{
+  "page_number": 103,
+  "text": "ANE\nBALANCE DEL BANCO CENTRAL DE RESERVA DEL PE\nDespués de la distribución\nACTIVO Y SALDOS DEUDORES\nENCAJE\nEncaje Legal en el Perú:\nOro en Bóveda\nS/.\n517'030,807.61\nMonedas Extranjeras pagaderas en oro\n1'494,677.26 S/. 518'525,484.87\n》\nEncaje Legal en el Extranjero:\nOro en Custodia en el Exterior\nS/. 1,289'789,596.98\nDepósitos pagaderos en oro\n498’474,245.46\n»\nDepósitos a Plazo\n»\n1,488'510,000.00\nAporte del Perú en Oro y Dólares al Fondo Monetario In-\n232'862,500.00\n» 3,509'636,342.44\nternacional\nTotal de Encaje Legal:\nS/. 4,028'161,8%\nOtras Disponibilidades\n》\n190'830,80\nOTROS FONDOS EN MONEDA EXTRANJERA\n》\n58 '869,54\nCOLOCACIONES\nBancos Comerciales:\nRedescuentos--Ley 8518\n§/.\n9'042,855.00\n—Comerciales\n5'472,599.20\n》\n”\nCréditos con Garantía - Leyes 9187 - 9929\n》\n125,400.00\nCréditos con Garantía.—Ley 10090\n》\n709,650.00\nPréstamo con Garantía.—Leyes 11953 - 12232\n12'472,500.00 S/.\n»\n27'823,004.20\nBancos de Fomento:\nBanco de Fomento Agropecuario del Perú\nS/.\n782'762,414.29\nBanco Industrial del Perú\n»\n488'781,759.24\nBanco Minero del Perú\n»\n49'509,952.78\n» 1,321'054,126.31\nTesoro Público:\nPréstamo.—Leyes 9312-9713\nS/.\n176'846,632.60\nEmpréstito Bancario Consolidado.—Ley 10536\n》\n213 '763,918.63\nAporte del Perú al Bco. Inter. de Desarrollo.—Ley 13439\n》\n152’371,172.35\nPtmo. Susc. Acc. Bco. Internac. de Rec. y Fmto.— Ley 10640\n》\n70'132,312.23\nDescuentos.—Leyes 10523-12677-12083\n»\n1,139'000,000.00\nAporte del Perú a la Asoc. Internacl. de Fmto. Ley 13785\n»\n4’373,594.77\nContrato de Unificación - Decreto Ley 14251\n》\n2,226 ’817,329.05\nLey 14780 Art. 2°\n》\n781'900,000.00\nCréditos Leyes 9047-9577 D.S. 24-3-42 y R.S. 10-3-44—Cam-\npaña Arrocera 1962/63\n110'000,000.00\n» 4,875'204,959.63\n》\nGobierno.—Leyea 13050-13259-13292-13511-13749\n》\n19'936,853.36\n6,244'018,99\nINVERSIONES\nInmuebles\nS/.\n1.00\nValores en poder del Superintendente de Bancos\n202,219.55\n》\nMuebles\n》\n1.00\nS/.\n202,221.55\nAporte del Perú en Moneda Nacional al Fondo Monetario\nInternacional\n754'172,602.08\n754'374,89\n»\n》\nOTRAS CUENTAS DEL ACTIVO\nVarios\n184'477,\n次\nTOTAL:\nS/.11,460 '733,4\nALFREDO C. FERREYROS\nJOSE MORALES URRESTI\nPresidente\nGerente General",
+  "lines": [
+    {
+      "text": "ANE",
+      "confidence": 0.9923298358917236
+    },
+    {
+      "text": "BALANCE DEL BANCO CENTRAL DE RESERVA DEL PE",
+      "confidence": 0.9822705388069153
+    },
+    {
+      "text": "Después de la distribución",
+      "confidence": 0.9997802972793579
+    },
+    {
+      "text": "ACTIVO Y SALDOS DEUDORES",
+      "confidence": 0.9803833961486816
+    },
+    {
+      "text": "ENCAJE",
+      "confidence": 0.9996759295463562
+    },
+    {
+      "text": "Encaje Legal en el Perú:",
+      "confidence": 0.9992478489875793
+    },
+    {
+      "text": "Oro en Bóveda",
+      "confidence": 0.9997700452804565
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9951100945472717
+    },
+    {
+      "text": "517'030,807.61",
+      "confidence": 0.9907446503639221
+    },
+    {
+      "text": "Monedas Extranjeras pagaderas en oro",
+      "confidence": 0.9985067844390869
+    },
+    {
+      "text": "1'494,677.26 S/. 518'525,484.87",
+      "confidence": 0.9672694206237793
+    },
+    {
+      "text": "》",
+      "confidence": 0.8166553974151611
+    },
+    {
+      "text": "Encaje Legal en el Extranjero:",
+      "confidence": 0.9897135496139526
+    },
+    {
+      "text": "Oro en Custodia en el Exterior",
+      "confidence": 0.9860538840293884
+    },
+    {
+      "text": "S/. 1,289'789,596.98",
+      "confidence": 0.9481877088546753
+    },
+    {
+      "text": "Depósitos pagaderos en oro",
+      "confidence": 0.9992330074310303
+    },
+    {
+      "text": "498’474,245.46",
+      "confidence": 0.9659329056739807
+    },
+    {
+      "text": "»",
+      "confidence": 0.6171650290489197
+    },
+    {
+      "text": "Depósitos a Plazo",
+      "confidence": 0.9979666471481323
+    },
+    {
+      "text": "»",
+      "confidence": 0.666248083114624
+    },
+    {
+      "text": "1,488'510,000.00",
+      "confidence": 0.9943464398384094
+    },
+    {
+      "text": "Aporte del Perú en Oro y Dólares al Fondo Monetario In-",
+      "confidence": 0.9818264245986938
+    },
+    {
+      "text": "232'862,500.00",
+      "confidence": 0.9920393228530884
+    },
+    {
+      "text": "» 3,509'636,342.44",
+      "confidence": 0.9398910999298096
+    },
+    {
+      "text": "ternacional",
+      "confidence": 0.999979555606842
+    },
+    {
+      "text": "Total de Encaje Legal:",
+      "confidence": 0.9985452890396118
+    },
+    {
+      "text": "S/. 4,028'161,8%",
+      "confidence": 0.9633404612541199
+    },
+    {
+      "text": "Otras Disponibilidades",
+      "confidence": 0.9989767670631409
+    },
+    {
+      "text": "》",
+      "confidence": 0.1839582622051239
+    },
+    {
+      "text": "190'830,80",
+      "confidence": 0.9027881622314453
+    },
+    {
+      "text": "OTROS FONDOS EN MONEDA EXTRANJERA",
+      "confidence": 0.9992436766624451
+    },
+    {
+      "text": "》",
+      "confidence": 0.5462334156036377
+    },
+    {
+      "text": "58 '869,54",
+      "confidence": 0.8659418821334839
+    },
+    {
+      "text": "COLOCACIONES",
+      "confidence": 0.9986345767974854
+    },
+    {
+      "text": "Bancos Comerciales:",
+      "confidence": 0.9996914863586426
+    },
+    {
+      "text": "Redescuentos--Ley 8518",
+      "confidence": 0.9673534631729126
+    },
+    {
+      "text": "§/.",
+      "confidence": 0.8148031830787659
+    },
+    {
+      "text": "9'042,855.00",
+      "confidence": 0.9949639439582825
+    },
+    {
+      "text": "—Comerciales",
+      "confidence": 0.9830977320671082
+    },
+    {
+      "text": "5'472,599.20",
+      "confidence": 0.9678454399108887
+    },
+    {
+      "text": "》",
+      "confidence": 0.8323346972465515
+    },
+    {
+      "text": "”",
+      "confidence": 0.8114068508148193
+    },
+    {
+      "text": "Créditos con Garantía - Leyes 9187 - 9929",
+      "confidence": 0.998748242855072
+    },
+    {
+      "text": "》",
+      "confidence": 0.7514243721961975
+    },
+    {
+      "text": "125,400.00",
+      "confidence": 0.9999872446060181
+    },
+    {
+      "text": "Créditos con Garantía.—Ley 10090",
+      "confidence": 0.9881128072738647
+    },
+    {
+      "text": "》",
+      "confidence": 0.7756639719009399
+    },
+    {
+      "text": "709,650.00",
+      "confidence": 0.9999921917915344
+    },
+    {
+      "text": "Préstamo con Garantía.—Leyes 11953 - 12232",
+      "confidence": 0.9932412505149841
+    },
+    {
+      "text": "12'472,500.00 S/.",
+      "confidence": 0.9848482608795166
+    },
+    {
+      "text": "»",
+      "confidence": 0.7099000811576843
+    },
+    {
+      "text": "27'823,004.20",
+      "confidence": 0.9829863905906677
+    },
+    {
+      "text": "Bancos de Fomento:",
+      "confidence": 0.995585560798645
+    },
+    {
+      "text": "Banco de Fomento Agropecuario del Perú",
+      "confidence": 0.9989800453186035
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9988703727722168
+    },
+    {
+      "text": "782'762,414.29",
+      "confidence": 0.9836326241493225
+    },
+    {
+      "text": "Banco Industrial del Perú",
+      "confidence": 0.9996128082275391
+    },
+    {
+      "text": "»",
+      "confidence": 0.57025146484375
+    },
+    {
+      "text": "488'781,759.24",
+      "confidence": 0.9640851020812988
+    },
+    {
+      "text": "Banco Minero del Perú",
+      "confidence": 0.982677161693573
+    },
+    {
+      "text": "»",
+      "confidence": 0.5822097659111023
+    },
+    {
+      "text": "49'509,952.78",
+      "confidence": 0.9763103127479553
+    },
+    {
+      "text": "» 1,321'054,126.31",
+      "confidence": 0.9647589921951294
+    },
+    {
+      "text": "Tesoro Público:",
+      "confidence": 0.9983949065208435
+    },
+    {
+      "text": "Préstamo.—Leyes 9312-9713",
+      "confidence": 0.9974428415298462
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9936758875846863
+    },
+    {
+      "text": "176'846,632.60",
+      "confidence": 0.9839681386947632
+    },
+    {
+      "text": "Empréstito Bancario Consolidado.—Ley 10536",
+      "confidence": 0.985266923904419
+    },
+    {
+      "text": "》",
+      "confidence": 0.8614727258682251
+    },
+    {
+      "text": "213 '763,918.63",
+      "confidence": 0.9596169590950012
+    },
+    {
+      "text": "Aporte del Perú al Bco. Inter. de Desarrollo.—Ley 13439",
+      "confidence": 0.9960648417472839
+    },
+    {
+      "text": "》",
+      "confidence": 0.3624271750450134
+    },
+    {
+      "text": "152’371,172.35",
+      "confidence": 0.9659584760665894
+    },
+    {
+      "text": "Ptmo. Susc. Acc. Bco. Internac. de Rec. y Fmto.— Ley 10640",
+      "confidence": 0.9896692633628845
+    },
+    {
+      "text": "》",
+      "confidence": 0.7205708622932434
+    },
+    {
+      "text": "70'132,312.23",
+      "confidence": 0.9616397619247437
+    },
+    {
+      "text": "Descuentos.—Leyes 10523-12677-12083",
+      "confidence": 0.9980416297912598
+    },
+    {
+      "text": "»",
+      "confidence": 0.723792314529419
+    },
+    {
+      "text": "1,139'000,000.00",
+      "confidence": 0.9974875450134277
+    },
+    {
+      "text": "Aporte del Perú a la Asoc. Internacl. de Fmto. Ley 13785",
+      "confidence": 0.9966307878494263
+    },
+    {
+      "text": "»",
+      "confidence": 0.5447465777397156
+    },
+    {
+      "text": "4’373,594.77",
+      "confidence": 0.965085506439209
+    },
+    {
+      "text": "Contrato de Unificación - Decreto Ley 14251",
+      "confidence": 0.9901151657104492
+    },
+    {
+      "text": "》",
+      "confidence": 0.4484977126121521
+    },
+    {
+      "text": "2,226 ’817,329.05",
+      "confidence": 0.9664049744606018
+    },
+    {
+      "text": "Ley 14780 Art. 2°",
+      "confidence": 0.9686571955680847
+    },
+    {
+      "text": "》",
+      "confidence": 0.6015056371688843
+    },
+    {
+      "text": "781'900,000.00",
+      "confidence": 0.9970930814743042
+    },
+    {
+      "text": "Créditos Leyes 9047-9577 D.S. 24-3-42 y R.S. 10-3-44—Cam-",
+      "confidence": 0.9962625503540039
+    },
+    {
+      "text": "paña Arrocera 1962/63",
+      "confidence": 0.9996734857559204
+    },
+    {
+      "text": "110'000,000.00",
+      "confidence": 0.9988613724708557
+    },
+    {
+      "text": "» 4,875'204,959.63",
+      "confidence": 0.937525749206543
+    },
+    {
+      "text": "》",
+      "confidence": 0.7323393821716309
+    },
+    {
+      "text": "Gobierno.—Leyea 13050-13259-13292-13511-13749",
+      "confidence": 0.9872655868530273
+    },
+    {
+      "text": "》",
+      "confidence": 0.8076822757720947
+    },
+    {
+      "text": "19'936,853.36",
+      "confidence": 0.9941400289535522
+    },
+    {
+      "text": "6,244'018,99",
+      "confidence": 0.9285414814949036
+    },
+    {
+      "text": "INVERSIONES",
+      "confidence": 0.9997758865356445
+    },
+    {
+      "text": "Inmuebles",
+      "confidence": 0.9998292922973633
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.9980103373527527
+    },
+    {
+      "text": "1.00",
+      "confidence": 0.9999960660934448
+    },
+    {
+      "text": "Valores en poder del Superintendente de Bancos",
+      "confidence": 0.9997210502624512
+    },
+    {
+      "text": "202,219.55",
+      "confidence": 0.9999500513076782
+    },
+    {
+      "text": "》",
+      "confidence": 0.7437766194343567
+    },
+    {
+      "text": "Muebles",
+      "confidence": 0.9991691708564758
+    },
+    {
+      "text": "》",
+      "confidence": 0.6581032872200012
+    },
+    {
+      "text": "1.00",
+      "confidence": 0.999998152256012
+    },
+    {
+      "text": "S/.",
+      "confidence": 0.996027946472168
+    },
+    {
+      "text": "202,221.55",
+      "confidence": 0.99994957447052
+    },
+    {
+      "text": "Aporte del Perú en Moneda Nacional al Fondo Monetario",
+      "confidence": 0.9907353520393372
+    },
+    {
+      "text": "Internacional",
+      "confidence": 0.9998385310173035
+    },
+    {
+      "text": "754'172,602.08",
+      "confidence": 0.9841884970664978
+    },
+    {
+      "text": "754'374,89",
+      "confidence": 0.9594060182571411
+    },
+    {
+      "text": "»",
+      "confidence": 0.66200190782547
+    },
+    {
+      "text": "》",
+      "confidence": 0.41343632340431213
+    },
+    {
+      "text": "OTRAS CUENTAS DEL ACTIVO",
+      "confidence": 0.9994783401489258
+    },
+    {
+      "text": "Varios",
+      "confidence": 0.9987381100654602
+    },
+    {
+      "text": "184'477,",
+      "confidence": 0.9860984086990356
+    },
+    {
+      "text": "次",
+      "confidence": 0.17373336851596832
+    },
+    {
+      "text": "TOTAL:",
+      "confidence": 0.9996741414070129
+    },
+    {
+      "text": "S/.11,460 '733,4",
+      "confidence": 0.9585211277008057
+    },
+    {
+      "text": "ALFREDO C. FERREYROS",
+      "confidence": 0.9987391233444214
+    },
+    {
+      "text": "JOSE MORALES URRESTI",
+      "confidence": 0.998518168926239
+    },
+    {
+      "text": "Presidente",
+      "confidence": 0.9999883770942688
+    },
+    {
+      "text": "Gerente General",
+      "confidence": 0.9999328851699829
+    }
+  ]
+}
