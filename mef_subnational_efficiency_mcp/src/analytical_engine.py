@@ -56,7 +56,7 @@ def top_peores_ejecutores_2025(limit: int = 20) -> pd.DataFrame:
     return df.sort_values("Avance", ascending=True).head(limit).reset_index(drop=True)
 
 
-def resumir_1964() -> dict:
+def resumir_1964(top_n: int = 10) -> dict:
     """Summarize the OCR-extracted 1964 historical record: categories, amounts and OCR quality."""
     if not HISTORICAL_1964_PATH.exists():
         raise FileNotFoundError(
@@ -78,6 +78,9 @@ def resumir_1964() -> dict:
     distribucion_pct = (
         (distribucion_categoria / total_monto * 100).round(2).to_dict() if total_monto > 0 else {}
     )
+    top_categorias_monto = {
+        k: round(v, 2) for k, v in distribucion_categoria.sort_values(ascending=False).head(top_n).to_dict().items()
+    }
 
     resultado = {
         "total_paginas": int(df["page_number"].nunique()),
@@ -87,6 +90,7 @@ def resumir_1964() -> dict:
         "total_montos": int(montos.count()),
         "distribucion_por_categoria": {k: round(v, 2) for k, v in distribucion_categoria.to_dict().items()},
         "distribucion_porcentual_categoria": distribucion_pct,
+        "top_categorias_monto": top_categorias_monto,
     }
 
     if OCR_QUALITY_1964_PATH.exists():
@@ -99,6 +103,9 @@ def resumir_1964() -> dict:
             "porcentaje_revision_manual": round(
                 float(quality["manual_review_required"].mean() * 100), 2
             ),
+            "por_pagina": quality.sort_values("page_number")[
+                ["page_number", "avg_confidence", "manual_review_required"]
+            ].to_dict(orient="records"),
         }
 
     return resultado

@@ -4,8 +4,8 @@
 
 - [x] En progreso
 - [x] Terminado
-- [x] Smoke tests aprobados (8/8 en tests/test_ocr_engine.py y tests/test_analytical_engine.py)
-- [ ] PR abierto
+- [x] Smoke tests aprobados (9/9 en tests/test_ocr_engine.py y tests/test_analytical_engine.py)
+- [x] PR abierto (#3)
 
 ## Que hice
 
@@ -73,7 +73,7 @@ Nota: `_ocr_page` cachea la salida cruda en `data/processed/ocr_pages_1964/page_
 - [x] Paginas con baja confianza estan marcadas (columna `manual_review_required`); 7 de 15 paginas (38, 190, 226, 272, 358, 532, 854) dieron `True` (avg_confidence 0.757-0.998, ver Notas de calidad OCR).
 - [x] CSV 1964 tiene filas utiles (783 filas, 78 categorias, 445 montos numericos, 43.2% nulos en columnas de monto).
 - [x] Resumen 1964 devuelve metricas numericas (`resumir_1964()` -> `total_categorias`, `total_montos`, `calidad_ocr`, etc.; `avg_confidence_promedio` 0.8943, `porcentaje_revision_manual` 46.67%).
-- [x] `pytest tests/test_ocr_engine.py tests/test_analytical_engine.py` -> 8/8 passed.
+- [x] `pytest tests/test_ocr_engine.py tests/test_analytical_engine.py` -> 9/9 passed.
 
 ## Limitaciones
 
@@ -84,8 +84,12 @@ Nota: `_ocr_page` cachea la salida cruda en `data/processed/ocr_pages_1964/page_
 ## Mejoras posibles
 
 - Capturar `rec_polys` (bounding boxes) del OCR y agrupar fragmentos por banda Y para reconstruir filas tabulares concepto+monto reales.
-- Normalizar/deduplicar categorias fragmentadas (similitud de string contra una lista conocida de encabezados: "MINISTERIO DE...", "TOTAL GENERAL...", "CAPITULO...") antes de evaluar `_is_header_line`.
+- Normalizar/deduplicar categorias fragmentadas (similitud de string contra una lista conocida de encabezados: "MINISTERIO DE...", "TOTAL GENERAL...", "CAPITULO...") antes de evaluar `_is_header_line`. No implementado: muchos pares de categorias con alta similitud de string son semanticamente opuestos (ej. `INGRESOS` vs `EGRESOS` difieren en distancia de edicion 2, igual que `MINEIRIO`/`MINIIRIO`), por lo que un dedup automatico por similitud arriesga fusionar ingresos con egresos. Requiere lista curada manual, no heuristica generica.
 - Usar PP-StructureV3 (table recognition) para las paginas mas tabulares y de baja confianza (38, 190, 226, 272, 358, 532, 854).
+
+## Adiciones post-PR (Tab 1 graficos)
+
+- `resumir_1964(top_n=10)` ahora tambien devuelve `top_categorias_monto` (top-N categorias por monto, listo para grafico de barras sin las 78 categorias ruidosas) y `calidad_ocr["por_pagina"]` (lista `page_number`/`avg_confidence`/`manual_review_required` por pagina, listo para grafico de calidad OCR). 9/9 tests (`test_resumir_1964_top_categorias_y_calidad_por_pagina`).
 
 ## Notas de calidad OCR
 
