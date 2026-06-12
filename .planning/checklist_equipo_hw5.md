@@ -51,8 +51,8 @@ mef_subnational_efficiency_mcp/
 - [ ] Inspeccionar maximo 5 a 10 filas para schema y muestras.
 - [ ] Procesar datasets pesados con scripts locales en Python.
 - [ ] Guardar salidas reducidas en `data/processed/`.
-- [ ] Usar exactamente 15 paginas del PDF 1964 para OCR, salvo que el profesor indique otra cosa.
-- [ ] Guardar evidencia de seleccion/calidad OCR, no solo el CSV final.
+- [x] Usar exactamente 15 paginas del PDF 1964 para OCR, salvo que el profesor indique otra cosa.
+- [x] Guardar evidencia de seleccion/calidad OCR, no solo el CSV final.
 - [ ] Mantener Tab 1 con resumen independiente 2025 y 1964, sin comparaciones numericas entre epocas.
 - [ ] Mantener Tabs 2, 3 y 4 solo con informacion moderna 2025.
 - [ ] Validar contratos de columnas antes de lanzar Streamlit.
@@ -105,52 +105,52 @@ Responsable del PDF historico, PaddleOCR y funciones analiticas compartidas.
 
 ### Entregables
 
-- [ ] `src/ocr_engine.py`
-- [ ] `src/analytical_engine.py`
-- [ ] `data/raw_pdfs/presupuesto_1964.pdf`
-- [ ] `data/snapshots/ocr_page_selection_1964.csv`
-- [ ] `data/processed/historical_1964.csv`
-- [ ] `data/processed/ocr_quality_1964.csv`
-- [ ] Reporte final: `docs/reportes/persona_2_ocr_analytics.md`
+- [x] `src/ocr_engine.py`
+- [x] `src/analytical_engine.py`
+- [x] `data/raw_pdfs/presupuesto_1964.pdf`
+- [x] `data/snapshots/ocr_page_selection_1964.csv`
+- [x] `data/processed/historical_1964.csv`
+- [x] `data/processed/ocr_quality_1964.csv`
+- [x] Reporte final: `docs/reportes/persona_2_ocr_analytics.md`
 
 ### Checklist de trabajo
 
-- [ ] Crear rama `feature/historical-1964-paddle-ocr`.
-- [ ] Descargar PDF 1964 en `data/raw_pdfs/presupuesto_1964.pdf`.
-- [ ] Seleccionar exactamente 15 paginas con tablas o matrices financieras.
-- [ ] Documentar numeros de pagina usados.
-- [ ] Guardar manifest de paginas en `data/snapshots/ocr_page_selection_1964.csv` con columnas: `page_number`, `page_index`, `reason`, `content_type`, `quality_note`.
-- [ ] Balancear cobertura documental de las 15 paginas: incluir, si existen en el PDF, ingresos, gastos, departamentos/entidades y cuadros/resumenes; no escoger solo las paginas mas faciles.
-- [ ] Convertir paginas a imagen con resolucion fija documentada, idealmente 300 DPI, para que el OCR sea reproducible.
-- [ ] Aplicar preprocesamiento minimo si hace falta: rotacion/orientacion, escala de grises, contraste o binarizacion, sin alterar los montos.
-- [ ] Ejecutar PaddleOCR sobre las 15 paginas.
-- [ ] Usar OCR general para texto y considerar PP-Structure/table recognition cuando la pagina tenga tablas complejas.
-- [ ] Guardar salida cruda por pagina en un formato auditable, por ejemplo JSONL o TXT dentro de `data/processed/ocr_pages_1964/`.
-- [ ] Verificar que ninguna pagina devuelva texto vacio.
-- [ ] Guardar `data/processed/ocr_quality_1964.csv` con: `page_number`, `line_count`, `numeric_token_count`, `avg_confidence`, `low_confidence_count`, `manual_review_required`.
-- [ ] Marcar revision manual si `avg_confidence` es baja, si hay pocos numeros o si el texto extraido es menor a 50 caracteres.
-- [ ] Parsear categorias, departamentos, montos o conceptos relevantes.
-- [ ] Conservar columnas de trazabilidad en `historical_1964.csv`: `page_number`, `source_line`, `category`, `concept`, `amount_raw`, `amount_numeric`, `parser_confidence`.
-- [ ] Normalizar montos con funcion unica y documentar separadores de miles/decimales.
-- [ ] Validar que cada monto numerico venga de un `amount_raw` rastreable.
-- [ ] Guardar datos limpios en `data/processed/historical_1964.csv`.
-- [ ] Crear rama `feature/analytical-engine`.
-- [ ] Implementar metricas 2025 reutilizables en `analytical_engine.py`.
-- [ ] Implementar resumen 1964 reutilizable en `analytical_engine.py`.
-- [ ] Implementar resumen de calidad OCR: paginas procesadas, lineas extraidas, porcentaje con revision manual y conteo de montos.
-- [ ] Confirmar que `analytical_engine.py` solo lee `data/processed/`.
-- [ ] Correr smoke tests de OCR y resumen 1964.
-- [ ] Completar reporte individual con archivos usados, limitaciones y mejoras.
-- [ ] Abrir PR.
+- [x] Crear rama `feature/historical-1964-paddle-ocr`.
+- [x] Descargar PDF 1964 en `data/raw_pdfs/presupuesto_1964.pdf`.
+- [x] Seleccionar exactamente 15 paginas con tablas o matrices financieras.
+- [x] Documentar numeros de pagina usados.
+- [x] Guardar manifest de paginas en `data/snapshots/ocr_page_selection_1964.csv` con columnas: `page_number`, `page_index`, `reason`, `content_type`, `quality_note`.
+- [x] Balancear cobertura documental de las 15 paginas: incluir, si existen en el PDF, ingresos, gastos, departamentos/entidades y cuadros/resumenes; no escoger solo las paginas mas faciles.
+- [x] Convertir paginas a imagen con resolucion fija documentada, idealmente 300 DPI, para que el OCR sea reproducible.
+- [x] Aplicar preprocesamiento minimo si hace falta: rotacion/orientacion, escala de grises, contraste o binarizacion, sin alterar los montos. (no fue necesario, documentado en el reporte)
+- [x] Ejecutar PaddleOCR sobre las 15 paginas.
+- [x] Usar OCR general para texto y considerar PP-Structure/table recognition cuando la pagina tenga tablas complejas. (considerado, no usado; queda en "Mejoras posibles")
+- [x] Guardar salida cruda por pagina en un formato auditable, por ejemplo JSONL o TXT dentro de `data/processed/ocr_pages_1964/`.
+- [x] Verificar que ninguna pagina devuelva texto vacio.
+- [x] Guardar `data/processed/ocr_quality_1964.csv` con: `page_number`, `line_count`, `numeric_token_count`, `avg_confidence`, `low_confidence_count`, `manual_review_required`.
+- [x] Marcar revision manual si `avg_confidence` es baja, si hay pocos numeros o si el texto extraido es menor a 50 caracteres.
+- [x] Parsear categorias, departamentos, montos o conceptos relevantes.
+- [x] Conservar columnas de trazabilidad en `historical_1964.csv`: `page_number`, `source_line`, `category`, `concept`, `amount_raw`, `amount_numeric`, `parser_confidence`.
+- [x] Normalizar montos con funcion unica y documentar separadores de miles/decimales.
+- [x] Validar que cada monto numerico venga de un `amount_raw` rastreable.
+- [x] Guardar datos limpios en `data/processed/historical_1964.csv`.
+- [x] Crear rama `feature/analytical-engine`. (implementado en `feature/historical-1964-paddle-ocr`, mismo PR #3 - no se abrio rama separada)
+- [x] Implementar metricas 2025 reutilizables en `analytical_engine.py`.
+- [x] Implementar resumen 1964 reutilizable en `analytical_engine.py`.
+- [x] Implementar resumen de calidad OCR: paginas procesadas, lineas extraidas, porcentaje con revision manual y conteo de montos.
+- [x] Confirmar que `analytical_engine.py` solo lee `data/processed/`.
+- [x] Correr smoke tests de OCR y resumen 1964. (9/9 passed)
+- [x] Completar reporte individual con archivos usados, limitaciones y mejoras.
+- [x] Abrir PR. (#3)
 
 ### Debe dejar listo para Persona 3
 
-- [ ] CSV 1964 limpio en `data/processed/`.
-- [ ] Carpeta `data/processed/ocr_pages_1964/` con texto/JSON por pagina.
-- [ ] Archivo `data/processed/ocr_quality_1964.csv`.
-- [ ] Lista de 15 paginas usadas.
-- [ ] Explicacion breve de metricas historicas.
-- [ ] Comando para regenerar OCR documentado.
+- [x] CSV 1964 limpio en `data/processed/`.
+- [x] Carpeta `data/processed/ocr_pages_1964/` con texto/JSON por pagina.
+- [x] Archivo `data/processed/ocr_quality_1964.csv`.
+- [x] Lista de 15 paginas usadas.
+- [x] Explicacion breve de metricas historicas.
+- [x] Comando para regenerar OCR documentado.
 
 ## Persona 3 - Skills + Streamlit + README
 
