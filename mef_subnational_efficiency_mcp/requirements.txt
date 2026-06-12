@@ -6,6 +6,6 @@ requests
 pyarrow
 paddleocr
 paddlepaddle
-pdf2image
+pymupdf
 Pillow
 pytest

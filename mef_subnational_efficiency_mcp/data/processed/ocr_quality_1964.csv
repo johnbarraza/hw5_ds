@@ -1,0 +1,16 @@
+page_number,line_count,numeric_token_count,avg_confidence,low_confidence_count,manual_review_required
+38,47,23,0.7571,29,True
+100,46,17,0.8124,24,False
+190,69,34,0.7874,37,True
+226,95,55,0.7917,43,True
+272,71,32,0.7953,36,True
+358,103,56,0.7797,57,True
+421,39,7,0.9909,0,False
+532,75,30,0.7841,44,True
+644,70,39,0.9764,0,False
+854,35,0,0.9976,0,True
+1003,113,52,0.9952,0,False
+1031,96,44,0.9939,1,False
+1037,79,30,0.9914,0,False
+1066,47,14,0.9705,3,False
+1068,30,12,0.9916,0,False
