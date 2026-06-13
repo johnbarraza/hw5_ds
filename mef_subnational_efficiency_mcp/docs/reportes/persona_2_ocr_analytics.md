@@ -5,7 +5,7 @@
 - [x] En progreso
 - [x] Terminado
 - [x] Smoke tests aprobados (9/9 en tests/test_ocr_engine.py y tests/test_analytical_engine.py)
-- [x] PR abierto (#3)
+- [x] PR abierto (#3, ajustes post-merge en #5)
 
 ## Que hice
 
@@ -90,6 +90,15 @@ Nota: `_ocr_page` cachea la salida cruda en `data/processed/ocr_pages_1964/page_
 ## Adiciones post-PR (Tab 1 graficos)
 
 - `resumir_1964(top_n=10)` ahora tambien devuelve `top_categorias_monto` (top-N categorias por monto, listo para grafico de barras sin las 78 categorias ruidosas) y `calidad_ocr["por_pagina"]` (lista `page_number`/`avg_confidence`/`manual_review_required` por pagina, listo para grafico de calidad OCR). 9/9 tests (`test_resumir_1964_top_categorias_y_calidad_por_pagina`).
+
+## Ajustes post-merge (rama fix_part23)
+
+- Persona 1 cambio el filtro 2025 de `PIM > 10M` a `PIM > 1M` (76 entidades, ver `docs/reportes/persona_1_mcp_pipeline.md`). El schema del parquet no cambio (`PIM_2025`, `DEVENGADO_2025`, `Avance`, `Saldo_No_Devengado`, etc.), asi que `analytical_engine.py` sigue funcionando sin cambios estructurales. Se actualizo:
+  - `tests/test_analytical_engine.py::test_top_peores_ejecutores_2025`: el assert `PIM_2025 >= 10_000_000` fallaba con el nuevo dataset (min real ~1.0M); cambiado a `>= 1_000_000`.
+  - Docstring de `top_peores_ejecutores_2025` ahora dice "PIM > 1M" en vez de "PIM > 10M".
+- Fix de calidad para los graficos de Tab 1: la pagina 1066 ("Operaciones Realizadas") repite los totales de EGRESOS/INGRESOS bajo etiquetas casi-duplicadas generadas por fragmentacion de OCR (`TOTAL GENERAL DE LOS EGRESOS`, `TOTAL DE LOS EGRESOS`, `TOTAL GENERAL DE LOS INGRESOS`, `TOTAL DE LOS INGRESOS`, las 4 con el mismo monto que `EGRESOS`/`INGRESOS`). Antes, estas 4 etiquetas duplicadas inflaban `total_monto` (~99B en vez de ~41B) y dominaban/diluian `distribucion_porcentual_categoria` y `top_categorias_monto`. Se agrego `_REDUNDANT_TOTAL_LABELS` en `analytical_engine.py` para excluirlas solo de los campos usados en graficos (`top_categorias_monto`, `distribucion_porcentual_categoria`); `distribucion_por_categoria` y `categorias` (78 categorias) quedan intactos para trazabilidad/auditoria. Resultado: `top_categorias_monto` ahora encabeza con `EGRESOS` (15.03B, 36.9%) e `INGRESOS` (14.07B, 34.5%), seguidos de `LOCAL:` (7.93B) y `DEFICIT POR COMPARACION` (961M) — esta ultima es `EGRESOS - INGRESOS` y es un buen dato narrativo (deficit fiscal de 1964).
+- `LOCAL:` sigue siendo una etiqueta poco informativa (suma de 57 lineas de proyectos municipales distintos en la pagina 1037, "Inversiones Indirectas - Gobiernos Locales"); no se renombro porque requeriria mapear cada linea a su municipio (`concept` de la linea anterior), fuera de alcance para esta correccion. Queda documentado como limitacion existente.
+- 9/9 tests siguen pasando (`pytest tests/test_analytical_engine.py tests/test_ocr_engine.py`).
 
 ## Notas de calidad OCR
 

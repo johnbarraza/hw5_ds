@@ -16,6 +16,15 @@ PRESUPUESTO_2025_PATH = PROCESSED_DIR / "presupuesto_2025.parquet"
 HISTORICAL_1964_PATH = PROCESSED_DIR / "historical_1964.csv"
 OCR_QUALITY_1964_PATH = PROCESSED_DIR / "ocr_quality_1964.csv"
 
+# 1964 category labels that are OCR-fragmented restatements of the same
+# EGRESOS/INGRESOS grand totals on page 1066 (see resumir_1964).
+_REDUNDANT_TOTAL_LABELS = {
+    "TOTAL GENERAL DE LOS EGRESOS",
+    "TOTAL DE LOS EGRESOS",
+    "TOTAL GENERAL DE LOS INGRESOS",
+    "TOTAL DE LOS INGRESOS",
+}
+
 
 def _load_2025() -> pd.DataFrame:
     if not PRESUPUESTO_2025_PATH.exists():
@@ -51,7 +60,7 @@ def calcular_metricas_2025() -> dict:
 
 
 def top_peores_ejecutores_2025(limit: int = 20) -> pd.DataFrame:
-    """Return executing units (PIM > 10M, already filtered upstream) sorted by lowest Avance%."""
+    """Return executing units (PIM > 1M, already filtered upstream) sorted by lowest Avance%."""
     df = _load_2025()
     return df.sort_values("Avance", ascending=True).head(limit).reset_index(drop=True)
 
@@ -74,12 +83,22 @@ def resumir_1964(top_n: int = 10) -> dict:
         .groupby("category")["amount_numeric"]
         .sum()
     )
-    total_monto = float(distribucion_categoria.sum())
+
+    # Page 1066 ("Operaciones Realizadas") restates the EGRESOS/INGRESOS grand
+    # totals under near-duplicate header labels (OCR-fragmented variants of
+    # the same total line, e.g. "TOTAL GENERAL DE LOS EGRESOS" vs "TOTAL DE
+    # LOS EGRESOS"). Drop them from the chart-facing distribution so the same
+    # grand total isn't counted 2-3x in the category breakdown; the raw
+    # per-label totals stay in distribucion_por_categoria for traceability.
+    distribucion_grafico = distribucion_categoria.drop(
+        labels=[c for c in _REDUNDANT_TOTAL_LABELS if c in distribucion_categoria.index]
+    )
+    total_monto = float(distribucion_grafico.sum())
     distribucion_pct = (
-        (distribucion_categoria / total_monto * 100).round(2).to_dict() if total_monto > 0 else {}
+        (distribucion_grafico / total_monto * 100).round(2).to_dict() if total_monto > 0 else {}
     )
     top_categorias_monto = {
-        k: round(v, 2) for k, v in distribucion_categoria.sort_values(ascending=False).head(top_n).to_dict().items()
+        k: round(v, 2) for k, v in distribucion_grafico.sort_values(ascending=False).head(top_n).to_dict().items()
     }
 
     resultado = {
