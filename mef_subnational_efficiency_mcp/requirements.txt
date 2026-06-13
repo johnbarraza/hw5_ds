@@ -2,10 +2,9 @@ streamlit
 pandas
 plotly
 fastmcp
-requests
-pyarrow
 paddleocr
-paddlepaddle
-pymupdf
-Pillow
-pytest
+pyarrow
+altair
+requests
+duckdb
+python-dotenv

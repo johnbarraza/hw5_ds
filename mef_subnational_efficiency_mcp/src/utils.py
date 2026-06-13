@@ -1,19 +1,22 @@
-"""Shared utility helpers.
+"""Shared utility helpers — Persona 3."""
 
-Persona 3 owns this module.
-"""
-
-from datetime import datetime, timezone
-from pathlib import Path
+import logging
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+def get_logger(name):
+    logging.basicConfig(
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    )
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.INFO)
+    return logger
 
 
-def utc_timestamp() -> str:
-    return datetime.now(timezone.utc).isoformat()
+def format_soles(value):
+    return f"S/ {value:,.0f}"
 
 
-def ensure_dir(path: Path) -> Path:
-    path.mkdir(parents=True, exist_ok=True)
-    return path
+def safe_divide(numerator, denominator, default=0):
+    if denominator == 0:
+        return default
+    return numerator / denominator
