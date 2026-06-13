@@ -5,7 +5,7 @@
 - [x] En progreso
 - [x] Terminado
 - [x] Smoke tests aprobados (9/9 en tests/test_ocr_engine.py y tests/test_analytical_engine.py)
-- [x] PR abierto (#3)
+- [x] PR abierto (#3, ajustes post-merge en #5)
 
 ## Que hice
 
