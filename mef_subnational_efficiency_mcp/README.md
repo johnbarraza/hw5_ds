@@ -1,49 +1,78 @@
 # MEF Subnational Efficiency MCP
 
-Proyecto HW5 para construir un pipeline local multi-agente de auditoria de gasto publico peruano, usando MCP, Skills, procesamiento local de datos 2025, OCR historico 1964 y dashboard Streamlit.
+## Project Overview
 
-## Estructura
+This project audits Peruvian subnational public spending efficiency using a multi-agent MCP pipeline.
+It combines MEF 2025 budget execution data (SIAF) with historical 1964 records from the Ministerio
+de Hacienda, processed via PaddleOCR, and surfaces insights through an interactive Streamlit dashboard.
+Two data tracks — 2025 and 1964 — are kept strictly independent throughout the pipeline.
 
-```text
-app.py
-requirements.txt
-.claude/skills/
-src/
-data/raw_pdfs/
-data/snapshots/
-data/processed/
-docs/reportes/
-video/link.txt
+## Architecture
+
+```
+┌─────────────┐
+│  MCP Server │  ← fastmcp, datosabiertos.gob.pe
+└──────┬──────┘
+       │
+       ▼
+┌───────────────┐
+│ Data Pipeline │  ← SIAF 2025, PIM / Devengado by ejecutora
+└──────┬────────┘
+       │
+       ▼
+┌────────────┐
+│ OCR Engine │  ← PaddleOCR on 1964 Ministerio de Hacienda PDFs
+└──────┬─────┘
+       │
+       ▼
+┌──────────────────┐
+│ Analytical Engine│  ← Avance%, Saldo No Devengado, regional aggregations
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────┐
+│ Streamlit App│  ← 4-tab dashboard (Persona 3)
+└──────────────┘
 ```
 
-## Flujo esperado
-
-1. Persona 1 implementa MCP y genera datos 2025 reducidos en `data/processed/`.
-2. Persona 2 ejecuta OCR sobre exactamente 15 paginas del PDF 1964 y genera `historical_1964.csv`.
-3. Persona 3 conecta Skills, dashboard Streamlit, QA, README final y video.
-
-## Reglas criticas
-
-- Nunca cargar datasets crudos completos al contexto del LLM.
-- Usar snapshots de 5 a 10 filas para inspeccion de schema.
-- Procesar datos pesados con scripts locales.
-- Mantener 2025 y 1964 como tracks independientes.
-- Trabajar siempre en ramas feature y abrir PR.
-
-## Instalacion
+## Installation
 
 ```bash
-python -m venv .venv
-.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Ejecucion
+## CLI Usage
 
 ```bash
+# Run executor skill for a specific monthly period
+claude "run executor_skill for period 2025-12"
+
+# Trigger full MEF data update for Q4
+claude "execute mef_update for 2025-Q4"
+
+# Launch Streamlit dashboard
 streamlit run app.py
 ```
 
-## Pendiente
+## Data Sources
 
-Completar esta documentacion con comandos reales cuando los scripts esten implementados.
+| Source | URL | Contents |
+|--------|-----|----------|
+| Datos Abiertos MEF | datosabiertos.gob.pe | SIAF 2025 budget execution (PIM, Devengado, Certificado) |
+| Fuentes Históricas del Perú | fuenteshistoricasdelperu.com | 1964 Ministerio de Hacienda budget PDFs |
+
+## Team Roles
+
+| Persona | Responsibilities |
+|---------|-----------------|
+| Persona 1 | MCP Server + Data Pipeline (2025 SIAF ingestion and processing) |
+| Persona 2 | OCR Engine + Analytical Engine (1964 historical PDF extraction and analysis) |
+| Persona 3 | Skills + Streamlit Dashboard + README + Video |
+
+## Known Limitations
+
+- The 2025 parquet dataset is a reduced sample (3 rows) for demonstration; full dataset requires a complete MCP pipeline run.
+- PaddleOCR accuracy on 1964 scanned documents averages ~80% confidence; manual review recommended for `parser_confidence < 0.75` rows.
+- The dashboard does not connect to the SIAF real-time API; data is static from `data/processed/`.
+- Cross-era (1964 vs 2025) monetary comparisons are intentionally excluded due to denomination changes (soles oro vs nuevos soles).
+- The `period` CLI argument routes the data refresh path but does not re-trigger the full OCR pipeline.
