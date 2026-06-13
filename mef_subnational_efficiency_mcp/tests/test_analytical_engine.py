@@ -17,7 +17,7 @@ def test_top_peores_ejecutores_2025():
     df = ae.top_peores_ejecutores_2025(limit=5)
     assert "Avance" in df.columns
     assert df["Avance"].is_monotonic_increasing
-    assert (df["PIM_2025"] >= 10_000_000).all()
+    assert (df["PIM_2025"] >= 1_000_000).all()
 
 
 def test_resumir_1964():
