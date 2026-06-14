@@ -126,6 +126,29 @@ def main():
         df64 = load_historical_1964().copy()
         df_ocr = load_ocr_quality_1964().copy()
 
+        # OCR noise cleanup — remove department names, garbled tokens, and summary totals
+        DEPARTAMENTOS_PERU = [
+            "MOQUEGUA", "PUNO", "LIMA", "CUSCO", "AREQUIPA", "TACNA", "ICA",
+            "PIURA", "LORETO", "JUNIN", "ANCASH", "CAJAMARCA", "HUANUCO",
+            "AYACUCHO", "APURIMAC", "HUANCAVELICA", "LAMBAYEQUE", "AMAZONAS",
+            "CALLAO", "TUMBES", "MADRE DE DIOS", "SAN MARTIN", "UCAYALI",
+            "SOLESORO", "SOLETESORO",
+        ]
+        TOKENS_RUIDO = ["NGRESO", "AOS", "7", "_ 3137", "CAPITULO IV"]
+        CATEGORIAS_TOTALES = [
+            "TOTAL GENERAL DE LOS EGRESOS", "TOTAL DE LOS EGRESOS",
+            "TOTAL GENERAL DE LOS INGRESOS", "TOTAL DE LOS INGRESOS",
+            "EGRESOS", "INGRESOS",
+        ]
+
+        _cat = df64["category"].str.upper().str.strip()
+        df1964_clean = df64[
+            ~_cat.isin(DEPARTAMENTOS_PERU) &
+            ~_cat.isin(TOKENS_RUIDO) &
+            ~_cat.isin(CATEGORIAS_TOTALES) &
+            (df64["category"].str.len() > 3)
+        ].copy()
+
         # OCR quality metrics sourced from ocr_quality_1964.csv
         avg_ocr_conf = df_ocr["avg_confidence"].mean()
         pages_review = int(df_ocr["manual_review_required"].sum())
@@ -143,7 +166,7 @@ def main():
 
         # Chart 1: top-10 categories by total amount (horizontal bar)
         top10 = (
-            df64.groupby("category")["amount_numeric"]
+            df1964_clean.groupby("category")["amount_numeric"]
             .sum()
             .nlargest(10)
             .reset_index()
@@ -163,7 +186,7 @@ def main():
 
         # Chart 2: pie chart of budget distribution by category
         dist = (
-            df64.groupby("category")["amount_numeric"]
+            df1964_clean.groupby("category")["amount_numeric"]
             .sum()
             .reset_index()
             .rename(columns={"amount_numeric": "Monto", "category": "Categoría"})
